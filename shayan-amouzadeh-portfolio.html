@@ -1,0 +1,2285 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" data-palette="navy" data-mode="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shayan Amouzadeh | شایان عموزاده — Computer & AI Engineer Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+  <style>
+    :root {
+      /* Default: Palette 1 (Deep Navy & Cobalt) - Dark */
+      --bg-primary: #070B14;
+      --bg-secondary: #0F172A;
+      --bg-card: rgba(17, 24, 39, 0.82);
+      --bg-elevated: #1E293B;
+      --text-primary: #F8FAFC;
+      --text-secondary: #94A3B8;
+      --text-muted: #64748B;
+      --accent-primary: #2563EB;
+      --accent-secondary: #38BDF8;
+      --accent-glow: rgba(37, 99, 235, 0.28);
+      --accent-soft: rgba(56, 189, 248, 0.12);
+      --border-color: rgba(148, 163, 184, 0.16);
+      --border-hover: rgba(56, 189, 248, 0.45);
+      --badge-bg: rgba(37, 99, 235, 0.15);
+      --badge-text: #60A5FA;
+    }
+
+    /* Palette 1: Deep Navy & Cobalt - Light */
+    html[data-palette="navy"][data-mode="light"] {
+      --bg-primary: #F8FAFC;
+      --bg-secondary: #EFF6FF;
+      --bg-card: rgba(255, 255, 255, 0.92);
+      --bg-elevated: #F1F5F9;
+      --text-primary: #0F172A;
+      --text-secondary: #334155;
+      --text-muted: #64748B;
+      --accent-primary: #1D4ED8;
+      --accent-secondary: #0284C7;
+      --accent-glow: rgba(29, 78, 216, 0.15);
+      --accent-soft: rgba(2, 132, 199, 0.10);
+      --border-color: rgba(15, 23, 42, 0.10);
+      --border-hover: rgba(29, 78, 216, 0.40);
+      --badge-bg: rgba(29, 78, 216, 0.10);
+      --badge-text: #1D4ED8;
+    }
+
+    /* Palette 2: Slate & Cyber Teal - Dark */
+    html[data-palette="slate"][data-mode="dark"] {
+      --bg-primary: #090F15;
+      --bg-secondary: #111C24;
+      --bg-card: rgba(19, 32, 42, 0.84);
+      --bg-elevated: #1A2C38;
+      --text-primary: #F1F5F9;
+      --text-secondary: #94A3B8;
+      --text-muted: #64748B;
+      --accent-primary: #0D9488;
+      --accent-secondary: #2DD4BF;
+      --accent-glow: rgba(13, 148, 136, 0.28);
+      --accent-soft: rgba(45, 212, 191, 0.12);
+      --border-color: rgba(148, 163, 184, 0.16);
+      --border-hover: rgba(45, 212, 191, 0.45);
+      --badge-bg: rgba(13, 148, 136, 0.18);
+      --badge-text: #5EEAD4;
+    }
+
+    /* Palette 2: Slate & Cyber Teal - Light */
+    html[data-palette="slate"][data-mode="light"] {
+      --bg-primary: #F4F7F6;
+      --bg-secondary: #E6F4F1;
+      --bg-card: rgba(255, 255, 255, 0.94);
+      --bg-elevated: #E2E8F0;
+      --text-primary: #0F172A;
+      --text-secondary: #334155;
+      --text-muted: #64748B;
+      --accent-primary: #0F766E;
+      --accent-secondary: #0D9488;
+      --accent-glow: rgba(15, 118, 110, 0.15);
+      --accent-soft: rgba(13, 148, 136, 0.10);
+      --border-color: rgba(15, 23, 42, 0.10);
+      --border-hover: rgba(15, 118, 110, 0.40);
+      --badge-bg: rgba(15, 118, 110, 0.10);
+      --badge-text: #0F766E;
+    }
+
+    /* Palette 3: Oxford Blue & Executive Silver - Dark */
+    html[data-palette="oxford"][data-mode="dark"] {
+      --bg-primary: #0B0F17;
+      --bg-secondary: #131B2E;
+      --bg-card: rgba(23, 31, 50, 0.85);
+      --bg-elevated: #1E293B;
+      --text-primary: #F8FAFC;
+      --text-secondary: #CBD5E1;
+      --text-muted: #94A3B8;
+      --accent-primary: #3B82F6;
+      --accent-secondary: #94A3B8;
+      --accent-glow: rgba(59, 130, 246, 0.24);
+      --accent-soft: rgba(148, 163, 184, 0.14);
+      --border-color: rgba(203, 213, 225, 0.16);
+      --border-hover: rgba(148, 163, 184, 0.48);
+      --badge-bg: rgba(59, 130, 246, 0.16);
+      --badge-text: #93C5FD;
+    }
+
+    /* Palette 3: Oxford Blue & Executive Silver - Light */
+    html[data-palette="oxford"][data-mode="light"] {
+      --bg-primary: #FFFFFF;
+      --bg-secondary: #F3F4F6;
+      --bg-card: rgba(255, 255, 255, 0.98);
+      --bg-elevated: #E5E7EB;
+      --text-primary: #111827;
+      --text-secondary: #374151;
+      --text-muted: #6B7280;
+      --accent-primary: #1E3A8A;
+      --accent-secondary: #475569;
+      --accent-glow: rgba(30, 58, 138, 0.14);
+      --accent-soft: rgba(71, 85, 105, 0.10);
+      --border-color: rgba(17, 24, 39, 0.12);
+      --border-hover: rgba(30, 58, 138, 0.42);
+      --badge-bg: rgba(30, 58, 138, 0.10);
+      --badge-text: #1E3A8A;
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      transition: background-color 0.3s ease, color 0.3s ease;
+      overflow-x: hidden;
+    }
+
+    html[lang="fa"] body {
+      font-family: 'Vazirmatn', 'Inter', system-ui, -apple-system, sans-serif;
+    }
+
+    html[lang="en"] body {
+      font-family: 'Inter', 'Vazirmatn', system-ui, -apple-system, sans-serif;
+    }
+
+    .font-mono-code {
+      font-family: 'JetBrains Mono', 'Consolas', 'Courier New', monospace;
+      direction: ltr;
+    }
+
+    .theme-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      backdrop-filter: blur(12px);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .theme-card:hover {
+      border-color: var(--border-hover);
+      box-shadow: 0 12px 32px -8px var(--accent-glow);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+      color: #FFFFFF;
+      box-shadow: 0 6px 20px -4px var(--accent-glow);
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      filter: brightness(1.08);
+      box-shadow: 0 10px 25px -4px var(--accent-glow);
+    }
+
+    .btn-secondary {
+      background: var(--bg-elevated);
+      color: var(--text-primary);
+      border: 1px solid var(--border-color);
+      transition: all 0.2s ease;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--border-hover);
+      background: var(--accent-soft);
+    }
+
+    .tech-badge {
+      background: var(--badge-bg);
+      color: var(--badge-text);
+      border: 1px solid var(--border-color);
+    }
+
+    .grid-bg {
+      background-image: radial-gradient(var(--border-color) 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+
+    .hero-glow {
+      background: radial-gradient(circle at 50% 30%, var(--accent-glow), transparent 68%);
+    }
+
+    .palette-pill.active {
+      outline: 2px solid var(--accent-secondary);
+      outline-offset: 2px;
+      background: var(--accent-soft);
+    }
+
+    .filter-btn.active {
+      background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+      color: #ffffff;
+      border-color: transparent;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: var(--bg-primary);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--bg-elevated);
+      border-radius: 4px;
+    }
+
+    /* Complete Self-Contained CSS (Zero CDN Dependency - Works 100% Offline/Filtered) */
+    .hidden { display: none !important; }
+    .block { display: block; }
+    .inline-block { display: inline-block; }
+    .flex { display: flex; }
+    .inline-flex { display: inline-flex; }
+    .grid { display: grid; }
+    .flex-1 { flex: 1 1 0%; }
+    .shrink-0 { flex-shrink: 0; }
+    .flex-col { flex-direction: column; }
+    .flex-wrap { flex-wrap: wrap; }
+    .items-center { align-items: center; }
+    .items-start { align-items: flex-start; }
+    .justify-between { justify-content: space-between; }
+    .justify-center { justify-content: center; }
+    .justify-end { justify-content: flex-end; }
+    .grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+    .grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+    /* Gaps & Spacing */
+    .gap-1 { gap: 0.25rem; }
+    .gap-1\.5 { gap: 0.375rem; }
+    .gap-2 { gap: 0.5rem; }
+    .gap-2\.5 { gap: 0.625rem; }
+    .gap-3 { gap: 0.75rem; }
+    .gap-4 { gap: 1rem; }
+    .gap-5 { gap: 1.25rem; }
+    .gap-6 { gap: 1.5rem; }
+    .gap-8 { gap: 2rem; }
+    .gap-10 { gap: 2.5rem; }
+
+    .space-y-1\.5 > * + * { margin-top: 0.375rem; }
+    .space-y-2 > * + * { margin-top: 0.5rem; }
+    .space-y-3 > * + * { margin-top: 0.75rem; }
+    .space-y-4 > * + * { margin-top: 1rem; }
+    .space-y-5 > * + * { margin-top: 1.25rem; }
+    .space-y-6 > * + * { margin-top: 1.5rem; }
+
+    /* Sizing */
+    .min-h-screen { min-height: 100vh; }
+    .min-w-0 { min-width: 0; }
+    .w-full { width: 100%; }
+    .max-w-7xl { max-width: 80rem; margin-left: auto; margin-right: auto; }
+    .max-w-2xl { max-width: 42rem; }
+    .mx-auto { margin-left: auto; margin-right: auto; }
+    .w-2 { width: 0.5rem; } .h-2 { height: 0.5rem; }
+    .w-2\.5 { width: 0.625rem; } .h-2\.5 { height: 0.625rem; }
+    .w-3 { width: 0.75rem; } .h-3 { height: 0.75rem; }
+    .w-3\.5 { width: 0.875rem; } .h-3\.5 { height: 0.875rem; }
+    .w-4 { width: 1rem; } .h-4 { height: 1rem; }
+    .w-5 { width: 1.25rem; } .h-5 { height: 1.25rem; }
+    .w-8 { width: 2rem; } .h-8 { height: 2rem; }
+    .w-9 { width: 2.25rem; } .h-9 { height: 2.25rem; }
+    .w-10 { width: 3.4rem; min-width: 3.4rem; padding: 0 0.4rem; } .h-10 { height: 2.65rem; min-height: 2.65rem; }
+    .h-16 { min-height: 4.75rem; padding-top: 0.75rem; padding-bottom: 0.75rem; }
+    .h-56 { height: 14rem; }
+    .max-h-60 { max-height: 15rem; }
+    .max-h-\[90vh\] { max-height: 90vh; }
+
+    /* Padding & Margin */
+    .p-1 { padding: 0.25rem; }
+    .p-2 { padding: 0.5rem; }
+    .p-3 { padding: 0.75rem; }
+    .p-3\.5 { padding: 0.875rem; }
+    .p-4 { padding: 1rem; }
+    .p-5 { padding: 1.25rem; }
+    .p-6 { padding: 1.5rem; }
+    .px-2 { padding-left: 0.5rem; padding-right: 0.5rem; }
+    .px-2\.5 { padding-left: 0.625rem; padding-right: 0.625rem; }
+    .px-3 { padding-left: 0.75rem; padding-right: 0.75rem; }
+    .px-3\.5 { padding-left: 0.875rem; padding-right: 0.875rem; }
+    .px-4 { padding-left: 1rem; padding-right: 1rem; }
+    .px-5 { padding-left: 1.25rem; padding-right: 1.25rem; }
+    .px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+    .py-0\.5 { padding-top: 0.125rem; padding-bottom: 0.125rem; }
+    .py-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+    .py-1\.5 { padding-top: 0.375rem; padding-bottom: 0.375rem; }
+    .py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+    .py-2\.5 { padding-top: 0.625rem; padding-bottom: 0.625rem; }
+    .py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+    .py-8 { padding-top: 2rem; padding-bottom: 2rem; }
+    .py-12 { padding-top: 3rem; padding-bottom: 3rem; }
+    .py-14 { padding-top: 3.5rem; padding-bottom: 3.5rem; }
+    .pt-1 { padding-top: 0.25rem; }
+    .pt-1\.5 { padding-top: 0.375rem; }
+    .pt-2 { padding-top: 0.5rem; }
+    .pt-3 { padding-top: 0.75rem; }
+    .pt-4 { padding-top: 1rem; }
+    .pt-10 { padding-top: 2.5rem; }
+    .pb-2 { padding-bottom: 0.5rem; }
+    .pb-4 { padding-bottom: 1rem; }
+    .pb-16 { padding-bottom: 4rem; }
+    .pb-24 { padding-bottom: 6rem; }
+    .pr-1 { padding-right: 0.25rem; }
+    .mt-0\.5 { margin-top: 0.125rem; }
+    .mt-1 { margin-top: 0.25rem; }
+    .mt-2 { margin-top: 0.5rem; }
+    .mb-1\.5 { margin-bottom: 0.375rem; }
+    .mb-2 { margin-bottom: 0.5rem; }
+    .mb-8 { margin-bottom: 2rem; }
+    .mb-10 { margin-bottom: 2.5rem; }
+    .ms-2 { margin-inline-start: 0.5rem; }
+    .ms-4 { margin-inline-start: 1rem; }
+    .ms-5 { margin-inline-start: 1.25rem; }
+
+    /* Typography */
+    .text-\[11px\] { font-size: 11px; line-height: 1.3; }
+    .text-xs { font-size: 0.75rem; line-height: 1.15rem; }
+    .text-sm { font-size: 0.875rem; line-height: 1.35rem; }
+    .text-base { font-size: 1rem; line-height: 1.5rem; }
+    .text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+    .text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+    .text-2xl { font-size: 1.5rem; line-height: 2rem; }
+    .text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+    .font-medium { font-weight: 500; }
+    .font-semibold { font-weight: 600; }
+    .font-bold { font-weight: 700; }
+    .font-extrabold { font-weight: 800; }
+    .leading-none { line-height: 1.15; }
+    .leading-tight { line-height: 1.25; }
+    .leading-snug { line-height: 1.375; }
+    .leading-relaxed { line-height: 1.65; }
+    .tracking-tight { letter-spacing: -0.02em; }
+    .tracking-wide { letter-spacing: 0.025em; }
+    .tracking-wider { letter-spacing: 0.05em; }
+    .tracking-widest { letter-spacing: 0.1em; }
+    .uppercase { text-transform: uppercase; }
+    .text-center { text-align: center; }
+    .truncate { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .nowrap { white-space: nowrap; }
+    .list-disc { list-style-type: disc; }
+
+    /* Colors & Backgrounds */
+    .text-white { color: #ffffff; }
+    .text-slate-100 { color: #f1f5f9; }
+    .text-slate-300 { color: #cbd5e1; }
+    .text-slate-400 { color: #94a3b8; }
+    .text-sky-300 { color: #7dd3fc; }
+    .text-sky-400 { color: #38bdf8; }
+    .text-emerald-300 { color: #6ee7b7; }
+    .text-emerald-400 { color: #34d399; }
+    .text-rose-300 { color: #fda4af; }
+    .bg-slate-950 { background-color: #020617; }
+    .bg-slate-950\/75 { background-color: rgba(2, 6, 23, 0.78); }
+    .bg-slate-900\/40 { background-color: rgba(15, 23, 42, 0.45); }
+    .bg-slate-800 { background-color: #1e293b; }
+    .bg-blue-500 { background-color: #3b82f6; }
+    .bg-teal-400 { background-color: #2dd4bf; }
+    .bg-slate-400 { background-color: #94a3b8; }
+    .bg-emerald-400 { background-color: #34d399; }
+    .bg-rose-500\/80 { background-color: rgba(244, 63, 94, 0.85); }
+    .bg-amber-500\/80 { background-color: rgba(245, 158, 11, 0.85); }
+    .bg-emerald-500\/80 { background-color: rgba(16, 185, 129, 0.85); }
+    .bg-gradient-to-tr.from-blue-700.to-sky-400 { background: linear-gradient(to top right, #1d4ed8, #38bdf8); }
+    .bg-gradient-to-tr.from-teal-700.to-emerald-400 { background: linear-gradient(to top right, #0f766e, #34d399); }
+    .bg-gradient-to-tr.from-blue-900.to-slate-400 { background: linear-gradient(to top right, #1e3a8a, #94a3b8); }
+    .bg-gradient-to-t { background: linear-gradient(to top, rgba(2,6,23,0.92), rgba(2,6,23,0.28), transparent); }
+    .bg-clip-text { -webkit-background-clip: text; background-clip: text; }
+    .text-transparent { color: transparent; }
+
+    /* Borders & Radius */
+    .rounded { border-radius: 0.25rem; }
+    .rounded-md { border-radius: 0.375rem; }
+    .rounded-lg { border-radius: 0.5rem; }
+    .rounded-xl { border-radius: 0.75rem; }
+    .rounded-2xl { border-radius: 1rem; }
+    .rounded-3xl { border-radius: 1.5rem; }
+    .rounded-full { border-radius: 9999px; }
+    .border { border: 1px solid var(--border-color); }
+    .border-t { border-top: 1px solid var(--border-color); }
+    .border-b { border-bottom: 1px solid var(--border-color); }
+    .border-slate-800 { border-color: #1e293b; }
+
+    /* Positioning & Effects */
+    .sticky { position: sticky; }
+    .top-0 { top: 0; }
+    .relative { position: relative; }
+    .absolute { position: absolute; }
+    .fixed { position: fixed; }
+    .inset-0 { top: 0; right: 0; bottom: 0; left: 0; }
+    .bottom-5 { bottom: 1.25rem; }
+    .end-5 { inset-inline-end: 1.25rem; }
+    .z-50 { z-index: 50; }
+    .overflow-hidden { overflow: hidden; }
+    .overflow-y-auto { overflow-y: auto; }
+    .object-cover { object-fit: cover; }
+    .shadow-md { box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.25); }
+    .shadow-xl { box-shadow: 0 16px 32px -8px rgba(0, 0, 0, 0.35); }
+    .shadow-2xl { box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.45); }
+    .backdrop-blur-sm { backdrop-filter: blur(6px); }
+    .backdrop-blur-xl { backdrop-filter: blur(16px); }
+
+    a { text-decoration: none; color: inherit; }
+    .hover\:underline:hover { text-decoration: underline; }
+    button { cursor: pointer; border: none; background: transparent; color: inherit; font-family: inherit; }
+    input, select, textarea { font-family: inherit; }
+    svg { display: inline-block; vertical-align: middle; flex-shrink: 0; }
+
+    /* Navbar Brand & Link Separation Enhancements */
+    .brand-divider {
+      padding-inline-end: 1.25rem;
+      border-inline-end: 1px solid var(--border-color);
+      white-space: nowrap;
+    }
+    .nav-item-pill {
+      white-space: nowrap;
+      padding: 0.45rem 0.8rem;
+      border-radius: 0.6rem;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+    .nav-item-pill:hover {
+      background: var(--accent-soft);
+      color: var(--text-primary);
+    }
+    .stat-value {
+      white-space: nowrap;
+      font-size: 1.25rem;
+      line-height: 1.4;
+    }
+
+    @media (min-width: 640px) {
+      .sm\:inline { display: inline !important; }
+      .sm\:flex-row { flex-direction: row; }
+      .sm\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .sm\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .sm\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+      .sm\:h-64 { height: 16rem; }
+      .sm\:px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+      .sm\:p-8 { padding: 2rem; }
+      .sm\:text-sm { font-size: 0.875rem; }
+      .sm\:text-base { font-size: 1rem; }
+      .sm\:text-lg { font-size: 1.125rem; }
+      .sm\:text-xl { font-size: 1.25rem; }
+      .sm\:text-2xl { font-size: 1.5rem; }
+      .sm\:text-3xl { font-size: 1.875rem; }
+      .sm\:text-5xl { font-size: 2.75rem; line-height: 1.18; }
+      .stat-value { font-size: 1.4rem; }
+    }
+    @media (min-width: 768px) {
+      .md\:flex { display: flex !important; }
+      .md\:hidden { display: none !important; }
+      .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .md\:col-span-2 { grid-column: span 2 / span 2; }
+      .md\:flex-row { flex-direction: row; }
+      .md\:items-end { align-items: flex-end; }
+      .md\:py-20 { padding-top: 4.5rem; padding-bottom: 4.5rem; }
+    }
+    @media (min-width: 1024px) {
+      .lg\:flex { display: flex !important; }
+      .lg\:hidden { display: none !important; }
+      .lg\:px-8 { padding-left: 2rem; padding-right: 2rem; }
+      .lg\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .lg\:grid-cols-12 { grid-template-columns: repeat(12, minmax(0, 1fr)); }
+      .lg\:col-span-5 { grid-column: span 5 / span 5; }
+      .lg\:col-span-6 { grid-column: span 6 / span 6; }
+      .lg\:col-span-7 { grid-column: span 7 / span 7; }
+      .lg\:col-span-2 { grid-column: span 2 / span 2; }
+      .lg\:text-6xl { font-size: 3.15rem; line-height: 1.15; }
+    }
+
+    /* Smooth Scroll Reveal Animations & Scroll Progress Bar */
+    section[id] {
+      scroll-margin-top: 7.5rem;
+    }
+    #scroll-progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      width: 0%;
+      z-index: 100;
+      background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+      box-shadow: 0 0 12px var(--accent-glow);
+      transition: width 0.1s ease-out;
+    }
+    .reveal-item {
+      opacity: 0;
+      transform: translateY(28px) scale(0.985);
+      transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+      transition-delay: var(--reveal-delay, 0ms);
+      will-change: opacity, transform;
+    }
+    .reveal-item.is-visible {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+    .nav-item-pill.active-nav {
+      background: var(--accent-soft);
+      color: var(--accent-secondary) !important;
+      font-weight: 600;
+    }
+
+
+    /* One-Click Executive Print / PDF Styling */
+    @media print {
+      body { background: #ffffff !important; color: #0f172a !important; font-size: 11pt !important; }
+      header, #scroll-progress-bar, .filter-btn, #project-search, #btn-mode-toggle, #btn-lang-toggle, .btn-primary, .btn-secondary, footer, #project-modal, #toast, .palette-pill, .term-cmd-btn, #panel-hero-terminal {
+        display: none !important;
+      }
+      .theme-card {
+        background: #ffffff !important;
+        border: 1px solid #cbd5e1 !important;
+        box-shadow: none !important;
+        break-inside: avoid;
+      }
+      a { text-decoration: none !important; color: #0f172a !important; }
+      .tech-badge { background: #f1f5f9 !important; color: #1e293b !important; border: 1px solid #cbd5e1 !important; }
+    }
+
+    /* Typewriter Cursor Animation */
+    .typewriter-cursor {
+      display: inline-block;
+      width: 2px;
+      height: 1.15em;
+      vertical-align: -0.15em;
+      background-color: var(--accent-secondary);
+      animation: blinkCursor 0.8s infinite;
+    }
+    @keyframes blinkCursor {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    /* Spotlight Glow & Flagship Card */
+    .spotlight-card {
+      position: relative;
+      border: 1px solid var(--border-hover) !important;
+      background: linear-gradient(145deg, var(--bg-card), var(--bg-secondary)) !important;
+      box-shadow: 0 16px 40px -12px var(--accent-glow) !important;
+    }
+    .badge-ci {
+      background: rgba(16, 185, 129, 0.14);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      font-size: 10px;
+      font-family: 'JetBrains Mono', 'Consolas', 'Courier New', monospace;
+      padding: 0.15rem 0.5rem;
+      border-radius: 9999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    .badge-arch {
+      background: rgba(56, 189, 248, 0.12);
+      color: #38bdf8;
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      font-size: 10px;
+      font-family: 'JetBrains Mono', 'Consolas', 'Courier New', monospace;
+      padding: 0.15rem 0.5rem;
+      border-radius: 9999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+
+    #project-search-input {
+      width: 100%;
+      min-width: 260px;
+      padding: 0.65rem 1rem;
+      border-radius: 0.85rem;
+      font-size: 0.8rem;
+      border: 1px solid var(--border-color);
+      background: var(--bg-secondary);
+      color: var(--text-primary);
+      transition: all 0.2s ease;
+    }
+    #project-search-input:focus {
+      outline: none;
+      border-color: var(--accent-secondary);
+      box-shadow: 0 0 12px var(--accent-glow);
+    }
+
+
+    .col-span-full { grid-column: 1 / -1; }
+    .top-1\/2 { top: 50%; }
+    .-translate-y-1\/2 { transform: translateY(-50%); }
+    .end-2\.5 { inset-inline-end: 0.625rem; }
+    .w-1\.5 { width: 0.375rem; }
+    .h-1\.5 { height: 0.375rem; }
+    .shadow-sm { box-shadow: 0 1px 3px rgba(0,0,0,0.2); }
+    .transition-all { transition: all 0.25s ease; }
+    .mb-4 { margin-bottom: 1rem; }
+    .mt-3 { margin-top: 0.75rem; }
+
+  </style>
+</head>
+<body class="min-h-screen grid-bg selection:bg-blue-600 selection:text-white">
+  <div id="scroll-progress-bar" aria-hidden="true"></div>
+
+  <!-- Top Navigation & Theme Header (Minimal Single-Row Executive Navbar) -->
+  <header class="sticky top-0 z-50 backdrop-blur-xl border-b shadow-sm" style="background: var(--bg-card); border-color: var(--border-color);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between py-3.5 gap-4" style="min-height: 4.25rem;">
+        <!-- Brand / Identity -->
+        <a href="#hero" class="flex items-center gap-3 brand-divider shrink-0 group focus:outline-none">
+          <div class="w-10 h-10 rounded-xl flex items-center justify-center font-mono-code font-bold text-xs text-white shadow-md shrink-0" style="background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));">
+            &lt;SA/&gt;
+          </div>
+          <div class="nowrap">
+            <div class="font-bold text-base sm:text-lg tracking-tight leading-none" data-i18n="brandName">شایان عموزاده</div>
+            <div class="text-xs mt-1 font-mono-code" style="color: var(--text-secondary);" data-i18n="brandRole">Computer &amp; AI Engineer</div>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center gap-2 text-sm font-medium" style="color: var(--text-secondary);">
+          <a href="#about" class="nav-item-pill" style="color: var(--text-primary);" data-i18n="navAbout">درباره من</a>
+          <a href="#projects" class="nav-item-pill" data-i18n="navProjects">پروژه‌ها</a>
+          <a href="#experience" class="nav-item-pill" data-i18n="navExperience">سوابق و تحصیلات</a>
+          <a href="#skills" class="nav-item-pill" data-i18n="navSkills">مهارت‌های فنی</a>
+          <a href="#contact" class="nav-item-pill" data-i18n="navContact">ارتباط با من</a>
+        </nav>
+
+        <!-- Right Controls: Minimal Palette Dots, Dark/Light Toggle & Language Toggle -->
+        <div class="flex items-center gap-2.5 shrink-0">
+          <!-- Minimal Executive Palette Switcher with Labels -->
+          <div class="hidden sm:flex items-center gap-1 p-1 rounded-xl border" style="background: var(--bg-secondary); border-color: var(--border-color);" role="group" aria-label="Color Palette Switcher">
+            <button type="button" id="btn-palette-navy" class="palette-pill active flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-medium transition-all" title="Deep Navy & Cobalt">
+              <span class="w-2.5 h-2.5 rounded-full bg-blue-500 inline-block shadow-sm"></span>
+              <span data-i18n="paletteNavyShort">سورمه‌ای</span>
+            </button>
+            <button type="button" id="btn-palette-slate" class="palette-pill flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-medium transition-all" title="Slate & Cyber Teal">
+              <span class="w-2.5 h-2.5 rounded-full bg-teal-400 inline-block shadow-sm"></span>
+              <span data-i18n="paletteSlateShort">فیروزه‌ای</span>
+            </button>
+            <button type="button" id="btn-palette-oxford" class="palette-pill flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-medium transition-all" title="Oxford Blue & Silver">
+              <span class="w-2.5 h-2.5 rounded-full bg-slate-400 inline-block shadow-sm"></span>
+              <span data-i18n="paletteOxfordShort">کلاسیک</span>
+            </button>
+            <span id="active-theme-indicator" class="hidden"></span>
+          </div>
+
+          <!-- Dark / Light Mode Toggle -->
+          <button type="button" id="btn-mode-toggle" class="btn-secondary flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-medium nowrap" aria-label="Toggle Dark/Light Theme">
+            <svg id="icon-moon" class="w-4 h-4 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+            </svg>
+            <svg id="icon-sun" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="5"></circle>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path>
+            </svg>
+            <span id="mode-label" class="hidden sm:inline" data-i18n="modeLightLabel">تم روشن</span>
+          </button>
+
+          <!-- Print / Export CV Button -->
+          <button type="button" id="btn-print-cv" class="btn-secondary hidden sm:flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-medium nowrap" title="Print / Save Clean PDF CV">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path>
+            </svg>
+            <span data-i18n="printCvLabel">خروجی PDF</span>
+          </button>
+
+          <!-- Language Toggle (FA / EN) -->
+          <button type="button" id="btn-lang-toggle" class="btn-primary px-3.5 py-2 rounded-xl text-xs font-bold tracking-wide flex items-center gap-1 nowrap" aria-label="Switch Language">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"></path>
+            </svg>
+            <span id="lang-label">EN</span>
+          </button>
+
+          <!-- Mobile Menu Button -->
+          <button type="button" id="btn-mobile-menu" class="md:hidden btn-secondary p-2 rounded-xl" aria-label="Open Navigation Menu">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Collapsible Navigation Menu -->
+      <div id="mobile-nav-drawer" class="hidden md:hidden pb-4 pt-2 border-t space-y-2 text-sm" style="border-color: var(--border-color);">
+        <a href="#about" class="mobile-nav-link block px-3 py-2 rounded-lg" data-i18n="navAbout">درباره من</a>
+        <a href="#projects" class="mobile-nav-link block px-3 py-2 rounded-lg" data-i18n="navProjects">پروژه‌ها</a>
+        <a href="#experience" class="mobile-nav-link block px-3 py-2 rounded-lg" data-i18n="navExperience">سوابق و تحصیلات</a>
+        <a href="#skills" class="mobile-nav-link block px-3 py-2 rounded-lg" data-i18n="navSkills">مهارت‌های فنی</a>
+        <a href="#contact" class="mobile-nav-link block px-3 py-2 rounded-lg" data-i18n="navContact">ارتباط با من</a>
+        <div class="pt-2 border-t flex items-center justify-between text-xs" style="border-color: var(--border-color);">
+          <span style="color: var(--text-secondary);" data-i18n="paletteSelectLabel">پالت رنگی:</span>
+          <div class="flex items-center gap-2">
+            <button type="button" id="btn-palette-navy-mob" class="p-1 rounded-full"><span class="w-4 h-4 rounded-full bg-blue-500 inline-block"></span></button>
+            <button type="button" id="btn-palette-slate-mob" class="p-1 rounded-full"><span class="w-4 h-4 rounded-full bg-teal-400 inline-block"></span></button>
+            <button type="button" id="btn-palette-oxford-mob" class="p-1 rounded-full"><span class="w-4 h-4 rounded-full bg-slate-400 inline-block"></span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="relative pt-10 pb-16 md:py-20 hero-glow">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <!-- Hero Text Column (7 cols) -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-medium tech-badge">
+            <span class="w-2 h-2 rounded-full" style="background: var(--accent-secondary);"></span>
+            <span data-i18n="heroBadge">مهندس کامپیوتر (نرم‌افزار) • توسعه‌دهنده Full-Stack و سیستم‌های هوشمند (AI)</span>
+          </div>
+
+          <div class="space-y-3">
+            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+              <span data-i18n="heroGreeting">شایان عموزاده</span>
+              <span class="block mt-2 text-xl sm:text-3xl lg:text-4xl font-extrabold bg-clip-text text-transparent" style="background-image: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary)); min-height: 1.4em;">
+                <span id="typewriter-text">معماری نرم‌افزار و سیستم‌های هوشمند</span><span class="typewriter-cursor"></span>
+              </span>
+            </h1>
+            <p class="text-base sm:text-lg leading-relaxed max-w-2xl" style="color: var(--text-secondary);" data-i18n="heroBio">
+              فارغ‌التحصیل مهندسی کامپیوتر (گرایش نرم‌افزار) از دانشگاه سمنان با تمرکز بر توسعه سامانه‌های تحت وب مدرن (PWA/SPA)، عامل‌های هوشمند (AI Agents)، معماری داده‌محور (ECS) در بازی‌سازی و برنامه‌نویسی سطح سیستم با C++ و Python. طراح و توسعه‌دهنده سامانه تجاری «املاک من».
+            </p>
+          </div>
+
+          <!-- Key Metric Highlights -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+            <div class="theme-card p-4 rounded-2xl">
+              <div class="stat-value font-extrabold font-mono-code" style="color: var(--accent-secondary);">8+</div>
+              <div class="text-xs mt-1" style="color: var(--text-secondary);" data-i18n="statProjects">پروژه تجاری و متن‌باز</div>
+            </div>
+            <div class="theme-card p-4 rounded-2xl">
+              <div class="stat-value font-extrabold font-mono-code" style="color: var(--accent-secondary);">2+ Yrs</div>
+              <div class="text-xs mt-1" style="color: var(--text-secondary);" data-i18n="statExp">سابقه رسمی مهندسی</div>
+            </div>
+            <div class="theme-card p-4 rounded-2xl">
+              <div class="stat-value font-extrabold font-mono-code" style="color: var(--accent-secondary);">AI &amp; NLP</div>
+              <div class="text-xs mt-1" style="color: var(--text-secondary);" data-i18n="statStack">عامل‌های هوشمند و یادگیری ماشین</div>
+            </div>
+            <div class="theme-card p-4 rounded-2xl">
+              <div class="stat-value font-extrabold font-mono-code" style="color: var(--accent-secondary);">7+ Langs</div>
+              <div class="text-xs mt-1" style="color: var(--text-secondary);" data-i18n="statTimeline">تسلط بر C++، Python، C# و PHP</div>
+            </div>
+          </div>
+
+          <!-- Primary CTA Buttons (Including Prominent PDF Resume Button) -->
+          <div class="flex flex-wrap items-center gap-3 pt-2">
+            <a href="#projects" class="btn-primary px-6 py-3 rounded-xl font-semibold text-sm flex items-center gap-2">
+              <span data-i18n="ctaViewProjects">مشاهده پروژه‌ها</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </a>
+            <a href="https://amlak-e-man.ir" target="_blank" rel="noopener noreferrer" class="btn-secondary px-5 py-3 rounded-xl font-semibold text-sm flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+              <span data-i18n="ctaLiveProject">پروژه تجاری (املاک من)</span>
+              <svg class="w-3.5 h-3.5 opacity-75" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+              </svg>
+            </a>
+            <button type="button" id="btn-hero-print" class="btn-secondary px-5 py-3 rounded-xl font-semibold text-sm flex items-center gap-2">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path>
+              </svg>
+              <span data-i18n="printCvHeroLabel">دریافت و چاپ رزومه (PDF)</span>
+            </button>
+            <div class="flex items-center gap-2 ms-1">
+              <a href="https://github.com/Shayan-Amz" target="_blank" rel="noopener noreferrer" class="btn-secondary p-3 rounded-xl font-mono-code text-xs font-semibold flex items-center justify-center" title="GitHub" aria-label="GitHub">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path></svg>
+              </a>
+              <a href="https://www.linkedin.com/in/shayan-amouzadeh" target="_blank" rel="noopener noreferrer" class="btn-secondary p-3 rounded-xl font-mono-code text-xs font-semibold flex items-center justify-center" title="LinkedIn" aria-label="LinkedIn">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"></path></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Right Column (5 cols): Interactive Engineering Hub (No Personal Photo - Pure Tech Visual + Interactive Terminal) -->
+        <div class="lg:col-span-5">
+          <div class="theme-card rounded-3xl overflow-hidden shadow-2xl border" style="border-color: var(--border-color);">
+            <!-- Widget Header Bar -->
+            <div class="px-4 py-3 border-b flex items-center justify-between" style="background: var(--bg-secondary); border-color: var(--border-color);">
+              <div class="flex items-center gap-2">
+                <span class="w-3 h-3 rounded-full bg-rose-500/80"></span>
+                <span class="w-3 h-3 rounded-full bg-amber-500/80"></span>
+                <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
+                <span class="font-mono-code text-xs ms-2" style="color: var(--text-secondary);">shayan-architecture.sys</span>
+              </div>
+              <div class="flex items-center gap-1 bg-slate-900/40 p-1 rounded-lg border" style="border-color: var(--border-color);">
+                <button type="button" id="tab-hero-visual" class="px-2.5 py-1 rounded-md text-xs font-medium btn-primary" data-i18n="heroTabVisual">نمای معماری</button>
+                <button type="button" id="tab-hero-terminal" class="px-2.5 py-1 rounded-md text-xs font-mono-code" style="color: var(--text-secondary);" data-i18n="heroTabTerminal">CLI Terminal</button>
+              </div>
+            </div>
+
+            <!-- View 1: 3D Architecture Visual & System Layers -->
+            <div id="panel-hero-visual" class="p-5 space-y-4">
+              <div class="relative rounded-2xl overflow-hidden border group" style="border-color: var(--border-color);">
+                <img src="data:image/jpeg;base64,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" alt="Computer Engineering & AI System Architecture" class="w-full h-56 sm:h-64 object-cover transition-transform duration-700 group-hover:scale-105" />
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/25 to-transparent flex flex-col justify-end p-4">
+                  <div class="font-mono-code text-[11px] text-sky-400 uppercase tracking-wider">System Stack Overview</div>
+                  <div class="text-white font-bold text-sm sm:text-base mt-0.5" data-i18n="visualCaption">معماری ماژولار، هوش مصنوعی و سیستم‌های سطح پایین</div>
+                </div>
+              </div>
+
+              <!-- Minimal Architecture Status Tagline -->
+              <div class="flex items-center justify-between text-xs px-2 pt-1 font-mono-code" style="color: var(--text-secondary);">
+                <span>STACK: AI AGENTS • FULL-STACK • C++</span>
+                <span class="text-emerald-400 flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> ACTIVE</span>
+              </div>
+            </div>
+
+            <!-- View 2: Interactive Engineering CLI Terminal -->
+            <div id="panel-hero-terminal" class="hidden p-4 bg-slate-950 text-slate-100 font-mono-code text-xs space-y-3" dir="ltr">
+              <div class="text-emerald-400">shayan@semnan-ce:~$ <span class="text-slate-300">./inspect_profile.sh --summary</span></div>
+              <div id="terminal-output" class="space-y-1.5 text-slate-300 max-h-60 overflow-y-auto pr-1 leading-relaxed">
+                <div><span class="text-sky-400">[IDENTITY]</span> Shayan Amouzadeh — B.Sc. Computer Engineering (Software)</div>
+                <div><span class="text-sky-400">[THESIS]</span> Intelligent Real Estate CRM with AI &amp; Microservices (amlak-e-man.ir)</div>
+                <div><span class="text-sky-400">[REPOS]</span> 7 Featured Open-Source Repositories on GitHub (@Shayan-Amz)</div>
+                <div class="text-slate-400 pt-1">Click a command below to query live portfolio data:</div>
+              </div>
+              <div class="flex flex-wrap gap-1.5 pt-2 border-t border-slate-800">
+                <button type="button" class="term-cmd-btn px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-sky-300 transition" data-cmd="whoami">whoami</button>
+                <button type="button" class="term-cmd-btn px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-sky-300 transition" data-cmd="projects">ls ./projects</button>
+                <button type="button" class="term-cmd-btn px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-sky-300 transition" data-cmd="skills">cat skills.json</button>
+                <button type="button" class="term-cmd-btn px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-sky-300 transition" data-cmd="contact">contact --info</button>
+                <button type="button" class="term-cmd-btn px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-rose-300 transition" data-cmd="clear">clear</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ABOUT & ARCHITECTURAL PILLARS SECTION -->
+    <section id="about" class="py-12 border-t" style="border-color: var(--border-color);">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div class="lg:col-span-5 space-y-3">
+          <div class="font-mono-code text-xs uppercase tracking-widest" style="color: var(--accent-secondary);" data-i18n="aboutTag">// 01. EXECUTIVE PROFILE</div>
+          <h2 class="text-2xl sm:text-3xl font-bold" data-i18n="aboutTitle">نگاه مهندسی: پیوند تئوری علوم کامپیوتر با محصولات تجاری</h2>
+          <p class="text-sm sm:text-base leading-relaxed" style="color: var(--text-secondary);" data-i18n="aboutDesc">
+            مسیر حرفه‌ای و آکادمیک من از سال ۱۴۰۱ بدون وقفه تحصیلی، بر پیوند مبانی مهندسی کامپیوتر با ساخت محصولات تجاری مقیاس‌پذیر متمرکز بوده است؛ از جمله طراحی و پیاده‌سازی سامانه چندمستأجره «املاک من» شامل دیتابیس خودترمیم و تراکنش‌های اتمیک UPSERT، الگوریتم اثرانگشت داده (کاهش ۸۵٪ ترافیک)، امنیت JWT/RBAC، موتور تطابق هوشمند تقاضا، پردازش تصویر در مرورگر و ماژول هوش مصنوعی دوموتوره.
+          </p>
+        </div>
+
+        <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="theme-card p-5 rounded-2xl space-y-2">
+            <div class="w-9 h-9 rounded-xl flex items-center justify-center tech-badge font-mono-code font-bold">AI</div>
+            <h3 class="font-bold text-base" data-i18n="pillar1Title">هوش مصنوعی و اتوماسیون هوشمند</h3>
+            <p class="text-xs sm:text-sm leading-relaxed" style="color: var(--text-secondary);" data-i18n="pillar1Desc">
+              طراحی معماری هوش مصنوعی دوموتوره شامل بازشناسی گفتار با مدل Whisper-large-v3 روی سرورلس Hugging Face، استخراج ساختاریافته JSON با مدل Llama-3 در گذرگاه OpenRouter، موتور تطابق هوشمند تقاضا و سیستم‌های توصیه‌گر یادگیری ماشین.
+            </p>
+          </div>
+
+          <div class="theme-card p-5 rounded-2xl space-y-2">
+            <div class="w-9 h-9 rounded-xl flex items-center justify-center tech-badge font-mono-code font-bold">WEB</div>
+            <h3 class="font-bold text-base" data-i18n="pillar2Title">معماری Full-Stack و امنیت وب</h3>
+            <p class="text-xs sm:text-sm leading-relaxed" style="color: var(--text-secondary);" data-i18n="pillar2Desc">
+              مهندسی سامانه‌های چندمستأجره (Multi-Tenant CRM) با معماری SPA/PWA، بک‌اند PHP/MySQL مجهز به موتور اتمیک UPSERT و خودترمیمی طرح‌واره (Zero-Downtime)، الگوریتم اثرانگشت داده (کاهش ۸۵٪ ترافیک)، احراز هویت JWT (RFC 7519)، کنترل دسترسی RBAC و فایروال Rate-Limiting.
+            </p>
+          </div>
+
+          <div class="theme-card p-5 rounded-2xl space-y-2">
+            <div class="w-9 h-9 rounded-xl flex items-center justify-center tech-badge font-mono-code font-bold">ECS</div>
+            <h3 class="font-bold text-base" data-i18n="pillar3Title">توسعه بازی و گرافیک کامپیوتری</h3>
+            <p class="text-xs sm:text-sm leading-relaxed" style="color: var(--text-secondary);" data-i18n="pillar3Desc">
+              توسعه مکانیزم‌های گیم‌پلی و رابط کاربری در موتور Unity با زبان C#، پیاده‌سازی معماری داده‌محور ECS با فریم‌ورک Entitas برای بهینه‌سازی کارایی و رندرینگ سه‌بعدی با OpenGL.
+            </p>
+          </div>
+
+          <div class="theme-card p-5 rounded-2xl space-y-2">
+            <div class="w-9 h-9 rounded-xl flex items-center justify-center tech-badge font-mono-code font-bold">SYS</div>
+            <h3 class="font-bold text-base" data-i18n="pillar4Title">معماری سخت‌افزار و الگوریتم‌های سطح سیستم</h3>
+            <p class="text-xs sm:text-sm leading-relaxed" style="color: var(--text-secondary);" data-i18n="pillar4Desc">
+              شبیه‌سازی واحد محاسبه و منطق ممیز شناور (IEEE 754 ALU) به زبان C++، برنامه‌نویسی سطح پایین با ARM Assembly، طراحی سیستم‌های دیجیتال و پیاده‌سازی الگوریتم‌های بهینه‌سازی و گراف.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION (All 8 Projects: 1 Flagship Live Commercial + 7 GitHub Repositories) -->
+    <section id="projects" class="py-14 border-t" style="border-color: var(--border-color);">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
+        <div>
+          <div class="font-mono-code text-xs uppercase tracking-widest" style="color: var(--accent-secondary);" data-i18n="projectsTag">// 02. ENGINEERED SYSTEMS &amp; REPOSITORIES</div>
+          <h2 class="text-2xl sm:text-3xl font-bold mt-1" data-i18n="projectsTitle">پروژه‌های شاخص تجاری، هوش مصنوعی و مهندسی سیستم</h2>
+          <p class="text-sm mt-1" style="color: var(--text-secondary);" data-i18n="projectsSubtitle">
+            شامل سامانه تجاری فعال «املاک من» و ۷ پروژه متن‌باز در گیت‌هاب با تست‌های خودکار CI و مستندسازی کامل
+          </p>
+        </div>
+
+        <!-- Category Filter Pills & Live Search Input -->
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+          <!-- Live Tech Search Input -->
+          <div class="relative min-w-[200px]">
+            <input type="text" id="project-search-input" class="w-full px-3.5 py-2 rounded-xl text-xs border font-mono-code focus:outline-none" style="background: var(--bg-secondary); border-color: var(--border-color); color: var(--text-primary);" placeholder="Search tech (C++, AI, Unity...)" aria-label="Search projects by technology or title" />
+            <button type="button" id="btn-clear-search" class="absolute end-2.5 top-1/2 -translate-y-1/2 text-xs font-mono-code hidden" style="color: var(--text-muted);" title="Clear Search">✕</button>
+          </div>
+
+          <!-- Category Filter Pills -->
+          <div class="flex flex-wrap items-center gap-2" role="group" aria-label="Project Category Filters">
+            <button type="button" class="filter-btn active px-3.5 py-2 rounded-xl text-xs font-semibold btn-secondary" data-filter="all" data-i18n="filterAll">همه پروژه‌ها (۸)</button>
+            <button type="button" class="filter-btn px-3.5 py-2 rounded-xl text-xs font-semibold btn-secondary" data-filter="ai-web" data-i18n="filterAiWeb">هوش مصنوعی و وب (۲)</button>
+            <button type="button" class="filter-btn px-3.5 py-2 rounded-xl text-xs font-semibold btn-secondary" data-filter="systems-algo" data-i18n="filterSystems">سیستم، الگوریتم و سخت‌افزار (۴)</button>
+            <button type="button" class="filter-btn px-3.5 py-2 rounded-xl text-xs font-semibold btn-secondary" data-filter="gamedev-graphics" data-i18n="filterGraphics">بازی‌سازی و گرافیک (۲)</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projects Grid (Rendered dynamically via JS for seamless bilingual & filter support) -->
+      <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </section>
+
+    <!-- EXPERIENCE & EDUCATION SECTION (Strictly NO GPA / NO Grades displayed) -->
+    <section id="experience" class="py-14 border-t" style="border-color: var(--border-color);">
+      <div class="mb-10">
+        <div class="font-mono-code text-xs uppercase tracking-widest" style="color: var(--accent-secondary);" data-i18n="expTag">// 03. CAREER &amp; ACADEMIC TIMELINE</div>
+        <h2 class="text-2xl sm:text-3xl font-bold mt-1" data-i18n="expTitle">سوابق شغلی و تحصیلی پیوسته</h2>
+        <p class="text-sm mt-1" style="color: var(--text-secondary);" data-i18n="expSubtitle">
+          ترکیب هم‌زمان تحصیل در مقطع کارشناسی مهندسی کامپیوتر با اشتغال رسمی صنعتی و توسعه محصولات نرم‌افزاری (۱۴۰۱ تا ۱۴۰۵)
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <!-- Left Column: Professional Work Experience (6 cols) -->
+        <div class="lg:col-span-6 space-y-5">
+          <div class="flex items-center gap-2.5 pb-2 border-b" style="border-color: var(--border-color);">
+            <span class="w-8 h-8 rounded-lg flex items-center justify-center tech-badge font-mono-code text-xs font-bold">PRO</span>
+            <h3 class="text-lg font-bold" data-i18n="workColTitle">سوابق شغلی و صنعتی</h3>
+          </div>
+
+          <!-- Job 1: Khakab Sazeh Ghomes -->
+          <div class="theme-card p-6 rounded-2xl space-y-3 relative overflow-hidden">
+            <div class="flex flex-wrap items-start justify-between gap-2">
+              <div>
+                <h4 class="font-bold text-base sm:text-lg" data-i18n="job1Role">مهندس و کارشناس کامپیوتر (Computer Engineer / IT Specialist)</h4>
+                <div class="text-sm font-medium mt-0.5" style="color: var(--accent-secondary);" data-i18n="job1Company">شرکت خاکاب سازه قومس (Khakab Sazeh Ghomes Co.)</div>
+              </div>
+              <span class="tech-badge px-3 py-1 rounded-full text-xs font-mono-code font-semibold" data-i18n="job1Duration">فروردین ۱۴۰۴ – اکنون (۲ سال سابقه رسمی • ادامه دارد)</span>
+            </div>
+            <ul class="space-y-2 text-xs sm:text-sm leading-relaxed list-disc ms-4" style="color: var(--text-secondary);">
+              <li data-i18n="job1Bullet1">مدیریت امور فنی، زیرساخت‌های نرم‌افزاری، شبکه داخلی و راهبری سیستم‌های اطلاعاتی و اتوماسیون اداری شرکت.</li>
+              <li data-i18n="job1Bullet2">طراحی و استانداردسازی جداول محاسباتی و مالی صورت‌وضعیت‌ها و مدیریت بانک‌های اطلاعاتی با Microsoft Access و Excel پیشرفته.</li>
+              <li data-i18n="job1Bullet3">کنترل زمان‌بندی پروژه‌های اجرایی و مهندسی با استفاده از نرم‌افزار Microsoft Project (MSP).</li>
+            </ul>
+            <div class="flex flex-wrap gap-1.5 pt-2">
+              <span class="tech-badge px-2.5 py-0.5 rounded-md text-[11px] font-mono-code">IT Infrastructure</span>
+              <span class="tech-badge px-2.5 py-0.5 rounded-md text-[11px] font-mono-code">Microsoft Access</span>
+              <span class="tech-badge px-2.5 py-0.5 rounded-md text-[11px] font-mono-code">MS Project (MSP)</span>
+              <span class="tech-badge px-2.5 py-0.5 rounded-md text-[11px] font-mono-code">Financial Modeling</span>
+            </div>
+          </div>
+
+          <!-- Job 2: Sargarmi Sazan Aseman Omid -->
+          <div class="theme-card p-6 rounded-2xl space-y-3 relative overflow-hidden">
+            <div class="flex flex-wrap items-start justify-between gap-2">
+              <div>
+                <h4 class="font-bold text-base sm:text-lg" data-i18n="job2Role">توسعه‌دهنده بازی و کارآموز (Game Developer &amp; Intern)</h4>
+                <div class="text-sm font-medium mt-0.5" style="color: var(--accent-secondary);" data-i18n="job2Company">شرکت بازی‌سازی سرگرمی‌سازان آسمان امید</div>
+              </div>
+              <span class="tech-badge px-3 py-1 rounded-full text-xs font-mono-code font-semibold" data-i18n="job2Duration">تیر ۱۴۰۴ – آذر ۱۴۰۴ (Jul – Dec 2025)</span>
+            </div>
+            <ul class="space-y-2 text-xs sm:text-sm leading-relaxed list-disc ms-4" style="color: var(--text-secondary);">
+              <li data-i18n="job2Bullet1">توسعه مکانیزم‌های گیم‌پلی و اسکریپت‌نویسی ماژولار با زبان C# در موتور بازی‌سازی Unity.</li>
+              <li data-i18n="job2Bullet2">پیاده‌سازی معماری داده‌محور ECS (Entity Component System) با استفاده از فریم‌ورک Entitas جهت جداسازی کامل داده‌ها از منطق بازی.</li>
+              <li data-i18n="job2Bullet3">بهبود چشمگیر کارایی (Performance)، افزایش مقیاس‌پذیری و ارتقای خوانایی کد نسبت به معماری شی‌گرایی سنتی.</li>
+            </ul>
+            <div class="flex flex-wrap gap-1.5 pt-2">
+              <span class="tech-badge px-2.5 py-0.5 rounded-md text-[11px] font-mono-code">C#</span>
+              <span class="tech-badge px-2.5 py-0.5 rounded-md text-[11px] font-mono-code">Unity Engine</span>
+              <span class="tech-badge px-2.5 py-0.5 rounded-md text-[11px] font-mono-code">Entitas ECS</span>
+              <span class="tech-badge px-2.5 py-0.5 rounded-md text-[11px] font-mono-code">Data-Oriented Design</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Academic Education & Thesis (6 cols - Zero Grades/GPA) -->
+        <div class="lg:col-span-6 space-y-5">
+          <div class="flex items-center gap-2.5 pb-2 border-b" style="border-color: var(--border-color);">
+            <span class="w-8 h-8 rounded-lg flex items-center justify-center tech-badge font-mono-code text-xs font-bold">EDU</span>
+            <h3 class="text-lg font-bold" data-i18n="eduColTitle">سوابق تحصیلی و پژوهشی</h3>
+          </div>
+
+          <!-- B.Sc. Semnan University -->
+          <div class="theme-card p-6 rounded-2xl space-y-4">
+            <div class="flex flex-wrap items-start justify-between gap-2">
+              <div>
+                <h4 class="font-bold text-base sm:text-lg" data-i18n="edu1Degree">کارشناسی مهندسی کامپیوتر – گرایش نرم‌افزار</h4>
+                <div class="text-sm font-medium mt-0.5" style="color: var(--accent-secondary);" data-i18n="edu1Uni">دانشگاه سمنان — دانشکده مهندسی برق و کامپیوتر</div>
+              </div>
+              <span class="tech-badge px-3 py-1 rounded-full text-xs font-mono-code font-semibold" data-i18n="edu1Date">مهر ۱۴۰۱ – شهریور ۱۴۰۵ (2022 – 2026)</span>
+            </div>
+
+            <!-- Final Thesis Highlight Box -->
+            <div class="p-4 rounded-xl border space-y-1.5" style="background: var(--bg-secondary); border-color: var(--border-color);">
+              <div class="text-xs font-mono-code font-semibold" style="color: var(--accent-secondary);" data-i18n="thesisLabel">B.Sc. CAPSTONE THESIS / پروژه پایانی کارشناسی</div>
+              <div class="font-bold text-sm leading-snug" data-i18n="thesisTitle">
+                طراحی و پیاده‌سازی سامانه هوشمند مدیریت املاک مبتنی بر هوش مصنوعی و معماری میکروسرویس / کلاینت-سرور ماژولار
+              </div>
+              <div class="text-xs pt-1" style="color: var(--text-secondary);" data-i18n="thesisAdvisor">
+                استاد راهنما: دکتر مرتضی دری‌گیو (Dr. Morteza Dorrigiv)
+              </div>
+            </div>
+
+            <!-- Key Focus Areas (No numbers or grades!) -->
+            <div class="space-y-2">
+              <div class="text-xs font-semibold" style="color: var(--text-secondary);" data-i18n="coreCoursesLabel">محورهای تخصصی و دروس کلیدی دوره کارشناسی:</div>
+              <div class="flex flex-wrap gap-1.5">
+                <span class="tech-badge px-2.5 py-1 rounded-lg text-xs" data-i18n="course1">مهندسی نرم‌افزار</span>
+                <span class="tech-badge px-2.5 py-1 rounded-lg text-xs" data-i18n="course2">طراحی زبان‌های برنامه‌نویسی و کامپایلر</span>
+                <span class="tech-badge px-2.5 py-1 rounded-lg text-xs" data-i18n="course3">هوش مصنوعی</span>
+                <span class="tech-badge px-2.5 py-1 rounded-lg text-xs" data-i18n="course4">ساختمان داده و الگوریتم‌ها</span>
+                <span class="tech-badge px-2.5 py-1 rounded-lg text-xs" data-i18n="course5">برنامه‌نویسی وب و پایگاه داده</span>
+                <span class="tech-badge px-2.5 py-1 rounded-lg text-xs" data-i18n="course6">شبکه‌های کامپیوتری و سیستم‌عامل</span>
+                <span class="tech-badge px-2.5 py-1 rounded-lg text-xs" data-i18n="course7">طراحی سیستم‌های دیجیتال و VLSI</span>
+                <span class="tech-badge px-2.5 py-1 rounded-lg text-xs" data-i18n="course8">معماری کامپیوتر</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- High School Diploma -->
+          <div class="theme-card p-5 rounded-2xl flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <h4 class="font-bold text-sm sm:text-base" data-i18n="edu2Degree">دیپلم ریاضی و فیزیک (High School Diploma in Mathematics &amp; Physics)</h4>
+              <div class="text-xs sm:text-sm mt-0.5" style="color: var(--text-secondary);" data-i18n="edu2School">دبیرستان علامه امینی، سمنان</div>
+            </div>
+            <span class="tech-badge px-3 py-1 rounded-full text-xs font-mono-code font-semibold" data-i18n="edu2Date">۱۴۰۱ (2022)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECHNICAL SKILLS MATRIX SECTION -->
+    <section id="skills" class="py-14 border-t" style="border-color: var(--border-color);">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
+        <div>
+          <div class="font-mono-code text-xs uppercase tracking-widest" style="color: var(--accent-secondary);" data-i18n="skillsTag">// 04. TECHNICAL ARSENAL</div>
+          <h2 class="text-2xl sm:text-3xl font-bold mt-1" data-i18n="skillsTitle">ماتریس مهارت‌های تخصصی و فناوری‌ها</h2>
+          <p class="text-sm mt-1" style="color: var(--text-secondary);" data-i18n="skillsSubtitle">
+            دسته‌بندی جامع مهارت‌های برنامه‌نویسی، هوش مصنوعی، توسعه وب، بازی‌سازی و معماری سخت‌افزار
+          </p>
+        </div>
+
+        <!-- Skill Category Filter -->
+        <div class="flex flex-wrap gap-2">
+          <button type="button" class="skill-filter-btn filter-btn active px-3 py-1.5 rounded-xl text-xs font-semibold btn-secondary" data-sfilter="all" data-i18n="sFilterAll">همه حوزه‌ها</button>
+          <button type="button" class="skill-filter-btn filter-btn px-3 py-1.5 rounded-xl text-xs font-semibold btn-secondary" data-sfilter="lang" data-i18n="sFilterLang">زبان‌های برنامه‌نویسی</button>
+          <button type="button" class="skill-filter-btn filter-btn px-3 py-1.5 rounded-xl text-xs font-semibold btn-secondary" data-sfilter="ai" data-i18n="sFilterAi">هوش مصنوعی و داده</button>
+          <button type="button" class="skill-filter-btn filter-btn px-3 py-1.5 rounded-xl text-xs font-semibold btn-secondary" data-sfilter="web" data-i18n="sFilterWeb">وب، معماری و امنیت</button>
+          <button type="button" class="skill-filter-btn filter-btn px-3 py-1.5 rounded-xl text-xs font-semibold btn-secondary" data-sfilter="game" data-i18n="sFilterGame">بازی‌سازی، گرافیک و سخت‌افزار</button>
+        </div>
+      </div>
+
+      <div id="skills-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+    </section>
+
+    <!-- CONTACT & DIRECT COLLABORATION SECTION -->
+    <section id="contact" class="py-14 border-t" style="border-color: var(--border-color);">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <!-- Contact Direct Channels (5 cols) -->
+        <div class="lg:col-span-5 space-y-5">
+          <div>
+            <div class="font-mono-code text-xs uppercase tracking-widest" style="color: var(--accent-secondary);" data-i18n="contactTag">// 05. GET IN TOUCH</div>
+            <h2 class="text-2xl sm:text-3xl font-bold mt-1" data-i18n="contactTitle">ارتباط مستقیم و همکاری</h2>
+            <p class="text-sm mt-2 leading-relaxed" style="color: var(--text-secondary);" data-i18n="contactDesc">
+              برای همکاری در پروژه‌های مهندسی نرم‌افزار، هوش مصنوعی، موقعیت‌های شغلی و یا ارتباطات آکادمیک، از طریق کانال‌های زیر در دسترس هستم.
+            </p>
+          </div>
+
+          <div class="space-y-3">
+            <!-- Email Card with Copy Button -->
+            <div class="theme-card p-4 rounded-2xl flex items-center justify-between gap-3">
+              <div class="min-w-0">
+                <div class="text-xs" style="color: var(--text-secondary);" data-i18n="emailLabel">ایمیل رسمی و آکادمیک</div>
+                <a href="mailto:shayanamz.7687@gmail.com" class="font-mono-code text-sm font-semibold truncate block hover:underline mt-0.5">shayanamz.7687@gmail.com</a>
+              </div>
+              <button type="button" id="btn-copy-email" class="btn-secondary px-3 py-1.5 rounded-lg text-xs font-medium shrink-0" data-i18n="copyBtn">کپی</button>
+            </div>
+
+            <!-- Phone / WhatsApp Card with Copy Button -->
+            <div class="theme-card p-4 rounded-2xl flex items-center justify-between gap-3">
+              <div class="min-w-0">
+                <div class="text-xs" style="color: var(--text-secondary);" data-i18n="phoneLabel">شماره تماس و واتس‌اپ</div>
+                <a href="tel:+989193323537" class="font-mono-code text-sm font-semibold block hover:underline mt-0.5">+98 919 332 3537</a>
+              </div>
+              <div class="flex items-center gap-1.5 shrink-0">
+                <button type="button" id="btn-copy-phone" class="btn-secondary px-3 py-1.5 rounded-lg text-xs font-medium" data-i18n="copyBtn">کپی</button>
+                <a href="https://wa.me/989193323537" target="_blank" rel="noopener noreferrer" class="btn-primary px-3 py-1.5 rounded-lg text-xs font-medium">WhatsApp</a>
+              </div>
+            </div>
+
+            <!-- Location & Socials -->
+            <div class="theme-card p-4 rounded-2xl space-y-3">
+              <div class="flex items-center justify-between text-xs">
+                <span style="color: var(--text-secondary);" data-i18n="locLabel">موقعیت مکانی:</span>
+                <span class="font-semibold" data-i18n="locValue">سمنان، ایران (Semnan, Iran)</span>
+              </div>
+              <div class="flex flex-wrap gap-2 pt-2 border-t" style="border-color: var(--border-color);">
+                <a href="https://www.linkedin.com/in/shayan-amouzadeh" target="_blank" rel="noopener noreferrer" class="btn-secondary flex-1 text-center py-2 rounded-xl text-xs font-mono-code font-semibold">LinkedIn</a>
+                <a href="https://github.com/Shayan-Amz" target="_blank" rel="noopener noreferrer" class="btn-secondary flex-1 text-center py-2 rounded-xl text-xs font-mono-code font-semibold">GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Message Composer (7 cols) -->
+        <div class="lg:col-span-7">
+          <form id="contact-form" class="theme-card p-6 sm:p-8 rounded-3xl space-y-4">
+            <h3 class="text-lg font-bold" data-i18n="formTitle">ارسال پیام سریع</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="sender-name" class="block text-xs font-medium mb-1.5" style="color: var(--text-secondary);" data-i18n="formNameLabel">نام و نام خانوادگی</label>
+                <input id="sender-name" type="text" required class="w-full px-4 py-2.5 rounded-xl text-sm border focus:outline-none" style="background: var(--bg-secondary); border-color: var(--border-color); color: var(--text-primary);" placeholder="Ali Rezaei / علی رضایی" />
+              </div>
+              <div>
+                <label for="sender-email" class="block text-xs font-medium mb-1.5" style="color: var(--text-secondary);" data-i18n="formEmailLabel">ایمیل یا شماره تماس شما</label>
+                <input id="sender-email" type="text" required class="w-full px-4 py-2.5 rounded-xl text-sm border focus:outline-none font-mono-code" style="background: var(--bg-secondary); border-color: var(--border-color); color: var(--text-primary);" placeholder="name@company.com" />
+              </div>
+            </div>
+            <div>
+              <label for="sender-subject" class="block text-xs font-medium mb-1.5" style="color: var(--text-secondary);" data-i18n="formSubjectLabel">موضوع همکاری</label>
+              <select id="sender-subject" class="w-full px-4 py-2.5 rounded-xl text-sm border focus:outline-none" style="background: var(--bg-secondary); border-color: var(--border-color); color: var(--text-primary);">
+                <option value="Full-Stack / AI Project Collaboration" data-i18n="subjOption1">پروژه توسعه نرم‌افزار و هوش مصنوعی</option>
+                <option value="Academic / Research Opportunity" data-i18n="subjOption2">فرصت پژوهشی و آکادمیک</option>
+                <option value="Software / Game Engineering Role" data-i18n="subjOption3">پیشنهاد شغلی مهندسی نرم‌افزار / بازی‌سازی</option>
+                <option value="General Inquiry" data-i18n="subjOption4">سایر موارد</option>
+              </select>
+            </div>
+            <div>
+              <label for="sender-message" class="block text-xs font-medium mb-1.5" style="color: var(--text-secondary);" data-i18n="formMsgLabel">متن پیام</label>
+              <textarea id="sender-message" rows="4" required class="w-full px-4 py-2.5 rounded-xl text-sm border focus:outline-none" style="background: var(--bg-secondary); border-color: var(--border-color); color: var(--text-primary);" placeholder="..."></textarea>
+            </div>
+            <div class="flex flex-wrap items-center justify-between gap-3 pt-2">
+              <button type="submit" class="btn-primary px-6 py-3 rounded-xl text-sm font-semibold flex items-center gap-2">
+                <span data-i18n="formSubmitEmail">آماده‌سازی و ارسال از طریق ایمیل</span>
+              </button>
+              <button type="button" id="btn-send-whatsapp" class="btn-secondary px-5 py-3 rounded-xl text-sm font-semibold flex items-center gap-2">
+                <span data-i18n="formSubmitWa">ارسال مستقیم در واتس‌اپ</span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t py-8 text-xs" style="background: var(--bg-secondary); border-color: var(--border-color); color: var(--text-secondary);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <span class="font-mono-code font-bold" style="color: var(--accent-secondary);">&lt;SA/&gt;</span>
+        <span data-i18n="footerCopy">© ۲۰۲۶ شایان عموزاده (Shayan Amouzadeh) — مهندس کامپیوتر و هوش مصنوعی</span>
+      </div>
+      <div class="flex items-center gap-5 font-mono-code">
+        <a href="https://github.com/Shayan-Amz" target="_blank" rel="noopener noreferrer" class="hover:underline">GitHub</a>
+        <a href="https://www.linkedin.com/in/shayan-amouzadeh" target="_blank" rel="noopener noreferrer" class="hover:underline">LinkedIn</a>
+        <a href="mailto:shayanamz.7687@gmail.com" class="hover:underline">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- PROJECT ARCHITECTURE & DETAILS MODAL -->
+  <div id="project-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-slate-950/75 backdrop-blur-sm">
+    <div class="theme-card w-full max-w-2xl rounded-3xl p-6 sm:p-8 space-y-5 max-h-[90vh] overflow-y-auto shadow-2xl" style="background: var(--bg-secondary);">
+      <div class="flex items-start justify-between gap-4 border-b pb-4" style="border-color: var(--border-color);">
+        <div>
+          <span id="modal-category" class="tech-badge px-2.5 py-1 rounded-md text-xs font-mono-code"></span>
+          <h3 id="modal-title" class="text-xl sm:text-2xl font-bold mt-2"></h3>
+        </div>
+        <button type="button" id="btn-close-modal" class="btn-secondary p-2 rounded-xl" aria-label="Close Modal">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <p id="modal-desc" class="text-sm sm:text-base leading-relaxed" style="color: var(--text-secondary);"></p>
+      <div>
+        <div class="text-xs font-bold uppercase tracking-wider mb-2" style="color: var(--accent-secondary);" data-i18n="modalHighlightsTitle">ویژگی‌های فنی و معماری سیستم:</div>
+        <ul id="modal-highlights" class="space-y-2 text-xs sm:text-sm list-disc ms-5" style="color: var(--text-primary);"></ul>
+      </div>
+      <div>
+        <div class="text-xs font-bold uppercase tracking-wider mb-2" style="color: var(--accent-secondary);" data-i18n="modalTechTitle">تکنولوژی‌ها و ابزارها:</div>
+        <div id="modal-tags" class="flex flex-wrap gap-1.5"></div>
+      </div>
+      <div class="pt-4 border-t flex flex-wrap items-center justify-end gap-3" style="border-color: var(--border-color);">
+        <a id="modal-link" href="https://github.com/Shayan-Amz" target="_blank" rel="noopener noreferrer" class="btn-primary px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold flex items-center gap-2">
+          <span id="modal-link-text">مشاهده پروژه</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div id="toast" class="fixed bottom-5 end-5 z-50 hidden px-4 py-3 rounded-2xl shadow-xl text-xs font-semibold btn-primary items-center gap-2">
+    <span id="toast-text">کپی شد!</span>
+  </div>
+
+  <script>
+    // --- BILINGUAL DICTIONARY (FA / EN) ---
+    const i18n = {
+      fa: {
+        brandName: "شایان عموزاده",
+        brandRole: "Computer & AI Engineer",
+        navAbout: "درباره من",
+        navProjects: "پروژه‌ها",
+        navExperience: "سوابق و تحصیلات",
+        navSkills: "مهارت‌های فنی",
+        navContact: "ارتباط با من",
+        paletteSelectLabel: "پالت رنگی:",
+        paletteNavyShort: "سورمه‌ای",
+        paletteSlateShort: "فیروزه‌ای",
+        paletteOxfordShort: "کلاسیک",
+        modeLightLabel: "تم روشن",
+        modeDarkLabel: "تم تیره",
+        studioHint: "می‌توانید از نوار بالا بین هر ۳ پالت رنگی، حالت تیره/روشن و زبان فارسی/انگلیسی جابه‌جا شوید.",
+        statusAvailable: "آماده همکاری در پروژه‌های نرم‌افزاری، هوش مصنوعی و پژوهشی",
+        heroBadge: "مهندس کامپیوتر (نرم‌افزار) • توسعه‌دهنده Full-Stack و سیستم‌های هوشمند (AI)",
+        heroGreeting: "شایان عموزاده",
+        heroHeadline: "معماری نرم‌افزار، هوش مصنوعی و سیستم‌های مقیاس‌پذیر",
+        heroBio: "فارغ‌التحصیل مهندسی کامپیوتر (گرایش نرم‌افزار) از دانشگاه سمنان با تمرکز بر توسعه سامانه‌های تحت وب مدرن (PWA/SPA)، عامل‌های هوشمند (AI Agents)، معماری داده‌محور (ECS) در بازی‌سازی و برنامه‌نویسی سطح سیستم با C++ و Python. طراح و توسعه‌دهنده سامانه تجاری «املاک من».",
+        statProjects: "پروژه تجاری و متن‌باز",
+        statExp: "سابقه رسمی مهندسی",
+        statStack: "عامل‌های هوشمند و یادگیری ماشین",
+        statTimeline: "تسلط بر C++، Python، C# و PHP",
+        ctaViewProjects: "مشاهده پروژه‌ها و نمونه‌کارها",
+        ctaLiveProject: "پروژه تجاری زنده (املاک من)",
+        heroTabVisual: "نمای معماری",
+        heroTabTerminal: "CLI Terminal",
+        visualCaption: "معماری ماژولار، هوش مصنوعی و سیستم‌های سطح پایین",
+        layer1Title: "عامل‌های هوشمند و NLP",
+        layer2Title: "توسعه وب و بازی‌سازی",
+        layer3Title: "سخت‌افزار و الگوریتم",
+        aboutTag: "// 01. EXECUTIVE PROFILE",
+        aboutTitle: "نگاه مهندسی: پیوند تئوری علوم کامپیوتر با محصولات تجاری",
+        aboutDesc: "مسیر حرفه‌ای و آکادمیک من از سال ۱۴۰۱ بدون وقفه تحصیلی، بر پیوند مبانی مهندسی کامپیوتر با ساخت محصولات تجاری مقیاس‌پذیر متمرکز بوده است؛ از جمله طراحی و پیاده‌سازی سامانه چندمستأجره «املاک من» شامل دیتابیس خودترمیم و تراکنش‌های اتمیک UPSERT، الگوریتم اثرانگشت داده (کاهش ۸۵٪ ترافیک)، امنیت JWT/RBAC، موتور تطابق هوشمند تقاضا، پردازش تصویر در مرورگر و ماژول هوش مصنوعی دوموتوره.",
+        pillar1Title: "هوش مصنوعی و اتوماسیون هوشمند",
+        pillar1Desc: "طراحی معماری هوش مصنوعی دوموتوره شامل بازشناسی گفتار با مدل Whisper-large-v3 روی سرورلس Hugging Face، استخراج ساختاریافته JSON با مدل Llama-3 در گذرگاه OpenRouter، موتور تطابق هوشمند تقاضا و سیستم‌های توصیه‌گر یادگیری ماشین.",
+        pillar2Title: "معماری Full-Stack و امنیت وب",
+        pillar2Desc: "مهندسی سامانه‌های چندمستأجره (Multi-Tenant CRM) با معماری SPA/PWA، بک‌اند PHP/MySQL مجهز به موتور اتمیک UPSERT و خودترمیمی طرح‌واره (Zero-Downtime)، الگوریتم اثرانگشت داده (کاهش ۸۵٪ ترافیک)، احراز هویت JWT (RFC 7519)، کنترل دسترسی RBAC و فایروال Rate-Limiting.",
+        pillar3Title: "توسعه بازی و گرافیک کامپیوتری",
+        pillar3Desc: "توسعه مکانیزم‌های گیم‌پلی و رابط کاربری در موتور Unity با زبان C#، پیاده‌سازی معماری داده‌محور ECS با فریم‌ورک Entitas برای بهینه‌سازی کارایی و رندرینگ سه‌بعدی با OpenGL.",
+        pillar4Title: "معماری سخت‌افزار و الگوریتم‌های سطح سیستم",
+        pillar4Desc: "شبیه‌سازی واحد محاسبه و منطق ممیز شناور (IEEE 754 ALU) به زبان C++، برنامه‌نویسی سطح پایین با ARM Assembly، طراحی سیستم‌های دیجیتال و پیاده‌سازی الگوریتم‌های بهینه‌سازی و گراف.",
+        projectsTag: "// 02. ENGINEERED SYSTEMS & REPOSITORIES",
+        projectsTitle: "پروژه‌های شاخص تجاری، هوش مصنوعی و مهندسی سیستم",
+        projectsSubtitle: "شامل سامانه تجاری فعال «املاک من» و ۷ پروژه متن‌باز در گیت‌هاب با تست‌های خودکار CI و مستندسازی کامل",
+        filterAll: "همه پروژه‌ها (۸)",
+        filterAiWeb: "هوش مصنوعی و وب (۲)",
+        filterSystems: "سیستم، الگوریتم و سخت‌افزار (۴)",
+        filterGraphics: "بازی‌سازی و گرافیک (۲)",
+        expTag: "// 03. CAREER & ACADEMIC TIMELINE",
+        expTitle: "سوابق شغلی و تحصیلی پیوسته",
+        expSubtitle: "ترکیب هم‌زمان تحصیل در مقطع کارشناسی مهندسی کامپیوتر با اشتغال رسمی صنعتی و توسعه محصولات نرم‌افزاری (۱۴۰۱ تا ۱۴۰۵)",
+        workColTitle: "سوابق شغلی و صنعتی",
+        job1Role: "مهندس و کارشناس کامپیوتر (Computer Engineer / IT Specialist)",
+        job1Company: "شرکت خاکاب سازه قومس (Khakab Sazeh Ghomes Co.)",
+        job1Duration: "فروردین ۱۴۰۴ – اکنون (۲ سال سابقه رسمی • ادامه دارد)",
+        job1Bullet1: "مدیریت امور فنی، زیرساخت‌های نرم‌افزاری، شبکه داخلی و راهبری سیستم‌های اطلاعاتی و اتوماسیون اداری شرکت.",
+        job1Bullet2: "طراحی و استانداردسازی جداول محاسباتی و مالی صورت‌وضعیت‌ها و مدیریت بانک‌های اطلاعاتی با Microsoft Access و Excel پیشرفته.",
+        job1Bullet3: "کنترل زمان‌بندی پروژه‌های اجرایی و مهندسی با استفاده از نرم‌افزار Microsoft Project (MSP).",
+        job2Role: "توسعه‌دهنده بازی و کارآموز (Game Developer & Intern)",
+        job2Company: "شرکت بازی‌سازی سرگرمی‌سازان آسمان امید",
+        job2Duration: "تیر ۱۴۰۴ – آذر ۱۴۰۴ (Jul – Dec 2025)",
+        job2Bullet1: "توسعه مکانیزم‌های گیم‌پلی و اسکریپت‌نویسی ماژولار با زبان C# در موتور بازی‌سازی Unity.",
+        job2Bullet2: "پیاده‌سازی معماری داده‌محور ECS (Entity Component System) با استفاده از فریم‌ورک Entitas جهت جداسازی کامل داده‌ها از منطق بازی.",
+        job2Bullet3: "بهبود چشمگیر کارایی (Performance)، افزایش مقیاس‌پذیری و ارتقای خوانایی کد نسبت به معماری شی‌گرایی سنتی.",
+        eduColTitle: "سوابق تحصیلی و پژوهشی",
+        edu1Degree: "کارشناسی مهندسی کامپیوتر – گرایش نرم‌افزار",
+        edu1Uni: "دانشگاه سمنان — دانشکده مهندسی برق و کامپیوتر",
+        edu1Date: "مهر ۱۴۰۱ – شهریور ۱۴۰۵ (2022 – 2026)",
+        thesisLabel: "B.Sc. CAPSTONE THESIS / پروژه پایانی کارشناسی",
+        thesisTitle: "طراحی و پیاده‌سازی سامانه هوشمند مدیریت املاک مبتنی بر هوش مصنوعی و معماری میکروسرویس / کلاینت-سرور ماژولار",
+        thesisAdvisor: "استاد راهنما: دکتر مرتضی دری‌گیو (Dr. Morteza Dorrigiv)",
+        coreCoursesLabel: "محورهای تخصصی و دروس کلیدی دوره کارشناسی:",
+        course1: "مهندسی نرم‌افزار",
+        course2: "طراحی زبان‌های برنامه‌نویسی و کامپایلر",
+        course3: "هوش مصنوعی",
+        course4: "ساختمان داده و الگوریتم‌ها",
+        course5: "برنامه‌نویسی وب و پایگاه داده",
+        course6: "شبکه‌های کامپیوتری و سیستم‌عامل",
+        course7: "طراحی سیستم‌های دیجیتال و VLSI",
+        course8: "معماری کامپیوتر",
+        edu2Degree: "دیپلم ریاضی و فیزیک (High School Diploma in Mathematics & Physics)",
+        edu2School: "دبیرستان علامه امینی، سمنان",
+        edu2Date: "۱۴۰۱ (2022)",
+        skillsTag: "// 04. TECHNICAL ARSENAL",
+        skillsTitle: "ماتریس مهارت‌های تخصصی و فناوری‌ها",
+        skillsSubtitle: "دسته‌بندی جامع مهارت‌های برنامه‌نویسی، هوش مصنوعی، توسعه وب، بازی‌سازی و معماری سخت‌افزار",
+        sFilterAll: "همه حوزه‌ها",
+        sFilterLang: "زبان‌های برنامه‌نویسی",
+        sFilterAi: "هوش مصنوعی و داده",
+        sFilterWeb: "وب، معماری و امنیت",
+        sFilterGame: "بازی‌سازی، گرافیک و سخت‌افزار",
+        contactTag: "// 05. GET IN TOUCH",
+        contactTitle: "ارتباط مستقیم و همکاری",
+        contactDesc: "برای همکاری در پروژه‌های مهندسی نرم‌افزار، هوش مصنوعی، موقعیت‌های شغلی و یا ارتباطات آکادمیک، از طریق کانال‌های زیر در دسترس هستم.",
+        emailLabel: "ایمیل رسمی و آکادمیک",
+        phoneLabel: "شماره تماس و واتس‌اپ",
+        copyBtn: "کپی",
+        printCvLabel: "خروجی PDF",
+        printCvHeroLabel: "دریافت و چاپ رزومه (PDF)",
+        locLabel: "موقعیت مکانی:",
+        locValue: "سمنان، ایران (Semnan, Iran)",
+        formTitle: "ارسال پیام سریع",
+        formNameLabel: "نام و نام خانوادگی",
+        formEmailLabel: "ایمیل یا شماره تماس شما",
+        formSubjectLabel: "موضوع همکاری",
+        subjOption1: "پروژه توسعه نرم‌افزار و هوش مصنوعی",
+        subjOption2: "فرصت پژوهشی و آکادمیک",
+        subjOption3: "پیشنهاد شغلی مهندسی نرم‌افزار / بازی‌سازی",
+        subjOption4: "سایر موارد",
+        formMsgLabel: "متن پیام",
+        formSubmitEmail: "آماده‌سازی و ارسال از طریق ایمیل",
+        formSubmitWa: "ارسال مستقیم در واتس‌اپ",
+        footerCopy: "© ۲۰۲۶ شایان عموزاده (Shayan Amouzadeh) — مهندس کامپیوتر و هوش مصنوعی",
+        modalHighlightsTitle: "ویژگی‌های فنی و معماری سیستم:",
+        modalTechTitle: "تکنولوژی‌ها و ابزارها:",
+        btnDetails: "جزئیات فنی",
+        btnSource: "مشاهده لینک"
+      },
+      en: {
+        brandName: "Shayan Amouzadeh",
+        brandRole: "Computer & AI Engineer",
+        navAbout: "About",
+        navProjects: "Projects",
+        navExperience: "Experience & Education",
+        navSkills: "Technical Skills",
+        navContact: "Contact",
+        paletteSelectLabel: "Color Palette:",
+        paletteNavyShort: "Navy Cobalt",
+        paletteSlateShort: "Cyber Teal",
+        paletteOxfordShort: "Oxford Silver",
+        modeLightLabel: "Light Mode",
+        modeDarkLabel: "Dark Mode",
+        studioHint: "Use the top bar to switch live between all 3 color palettes, Dark/Light mode, and Persian/English.",
+        statusAvailable: "Open to Software Engineering, AI & Academic Opportunities",
+        heroBadge: "B.Sc. Computer Engineering (Software) • Full-Stack & AI Systems Engineer",
+        heroGreeting: "Shayan Amouzadeh",
+        heroHeadline: "Software Architecture, AI Agents & High-Performance Systems",
+        heroBio: "Computer Engineering (Software) graduate from Semnan University specializing in modern Full-Stack Web Applications (PWA/SPA), Agentic AI workflows, Data-Oriented Game Architecture (Unity ECS), and system-level programming in C++, Python, and ARM Assembly. Creator of the commercial 'Amlak-e-Man' intelligent CRM platform.",
+        statProjects: "Commercial & Open-Source Projects",
+        statExp: "Industry Engineering Experience",
+        statStack: "AI Agents, Whisper & ML Models",
+        statTimeline: "C++, Python, C#, PHP, JS & SQL",
+        ctaViewProjects: "Explore Engineered Projects",
+        ctaLiveProject: "Live Commercial App (Amlak-e-Man)",
+        heroTabVisual: "Architecture View",
+        heroTabTerminal: "CLI Terminal",
+        visualCaption: "Modular Microservices, AI Pipelines & Low-Level Systems",
+        layer1Title: "AI Agents & NLP",
+        layer2Title: "Full-Stack Web & ECS",
+        layer3Title: "Hardware & Algorithms",
+        aboutTag: "// 01. EXECUTIVE PROFILE",
+        aboutTitle: "Engineering Philosophy: Bridging Computer Science Theory & Commercial Products",
+        aboutDesc: "Since 2022, my academic and professional trajectory has progressed continuously without any study gap—combining foundational Computer Engineering pillars (Compiler Design, Computer Architecture, Algorithms) with production-grade commercial web systems and applied AI.",
+        pillar1Title: "Artificial Intelligence & Agentic Automation",
+        pillar1Desc: "Building conversational AI Agents, Prompt Engineering, NLP pipelines, OpenAI Whisper speech-to-text integration, and Scikit-learn machine learning recommendation engines.",
+        pillar2Title: "Full-Stack Web Architecture & Security",
+        pillar2Desc: "Architecting modular Client-Server PWA/SPA platforms with PHP & MySQL backends, custom dynamic token-based authentication resilient against XSS and Session Hijacking, and automated PDF engines.",
+        pillar3Title: "Game Development & 3D Computer Graphics",
+        pillar3Desc: "Developing gameplay systems and modular UI in Unity (C#), implementing Data-Oriented Entity Component System (ECS) architecture via Entitas, and building custom OpenGL 3D rendering pipelines.",
+        pillar4Title: "Computer Architecture & Low-Level Systems",
+        pillar4Desc: "Simulating bit-accurate IEEE 754 Floating-Point ALU hardware in C++, low-level graphics rendering in ARM Assembly, VLSI/Digital System design, and classic graph/greedy optimization algorithms.",
+        projectsTag: "// 02. ENGINEERED SYSTEMS & REPOSITORIES",
+        projectsTitle: "Featured Commercial, AI & Systems Engineering Projects",
+        projectsSubtitle: "Featuring the live commercial 'Amlak-e-Man' CRM platform and 7 open-source GitHub repositories with CI workflows",
+        filterAll: "All Projects (8)",
+        filterAiWeb: "AI & Web Systems (2)",
+        filterSystems: "C++, Assembly & Algorithms (4)",
+        filterGraphics: "Unity & 3D Graphics (2)",
+        expTag: "// 03. CAREER & ACADEMIC TIMELINE",
+        expTitle: "Continuous Professional & Academic Journey",
+        expSubtitle: "Concurrent B.Sc. Computer Engineering studies, 2 years of official industry engineering tenure, and commercial product launch (2022–2026)",
+        workColTitle: "Professional Experience",
+        job1Role: "Computer Engineer / IT Specialist",
+        job1Company: "Khakab Sazeh Ghomes Co.",
+        job1Duration: "Mar 2025 – Present (2 Yrs Official Tenure • Ongoing)",
+        job1Bullet1: "Managed enterprise IT infrastructure, internal networking, information systems, and office automation workflows.",
+        job1Bullet2: "Designed and standardized financial billing models and relational databases using Microsoft Access and advanced Excel.",
+        job1Bullet3: "Directed project scheduling and timeline tracking across engineering operations using Microsoft Project (MSP).",
+        job2Role: "Game Developer & Game Development Intern",
+        job2Company: "Sargarmi Sazan Aseman Omid Game Studio",
+        job2Duration: "July 2025 – December 2025",
+        job2Bullet1: "Engineered core gameplay mechanics and modular scripts using C# in Unity Engine.",
+        job2Bullet2: "Implemented Data-Oriented Entity Component System (ECS) architecture using the Entitas framework to decouple state from behavior.",
+        job2Bullet3: "Significantly improved runtime performance, scalability, and code maintainability compared to traditional OOP patterns.",
+        eduColTitle: "Academic Education & Research",
+        edu1Degree: "B.Sc. in Computer Engineering – Software",
+        edu1Uni: "Semnan University — Faculty of Electrical & Computer Engineering",
+        edu1Date: "September 2022 – September 2026",
+        thesisLabel: "B.Sc. CAPSTONE THESIS",
+        thesisTitle: "Design & Implementation of an Intelligent Real Estate Management System Using Artificial Intelligence & Microservice Architecture",
+        thesisAdvisor: "Supervisor: Dr. Morteza Dorrigiv",
+        coreCoursesLabel: "Key Academic Focus Areas & Core Coursework:",
+        course1: "Software Engineering",
+        course2: "Programming Languages & Compiler Design",
+        course3: "Artificial Intelligence",
+        course4: "Data Structures & Algorithms",
+        course5: "Web Programming & Database Design",
+        course6: "Computer Networks & Operating Systems",
+        course7: "Digital System Design & VLSI",
+        course8: "Computer Architecture",
+        edu2Degree: "High School Diploma in Mathematics & Physics",
+        edu2School: "Allameh Amini High School, Semnan, Iran",
+        edu2Date: "2022",
+        skillsTag: "// 04. TECHNICAL ARSENAL",
+        skillsTitle: "Technical Skills & Engineering Stack",
+        skillsSubtitle: "Comprehensive breakdown across programming languages, AI/ML, Full-Stack web, Game Dev (ECS), and Hardware systems",
+        sFilterAll: "All Domains",
+        sFilterLang: "Programming Languages",
+        sFilterAi: "AI & Data Science",
+        sFilterWeb: "Web, Architecture & Security",
+        sFilterGame: "Game Dev, Graphics & Hardware",
+        contactTag: "// 05. GET IN TOUCH",
+        contactTitle: "Direct Contact & Collaboration",
+        contactDesc: "Available for Software Engineering and AI projects, full-time roles, and international academic collaborations.",
+        emailLabel: "Official & Academic Email",
+        phoneLabel: "Phone & WhatsApp",
+        copyBtn: "Copy",
+        printCvLabel: "Print CV",
+        printCvHeroLabel: "Print / Export CV (PDF)",
+        locLabel: "Location:",
+        locValue: "Semnan, Iran",
+        formTitle: "Quick Message Composer",
+        formNameLabel: "Your Full Name",
+        formEmailLabel: "Your Email or Phone",
+        formSubjectLabel: "Collaboration Topic",
+        subjOption1: "Full-Stack / AI Project Collaboration",
+        subjOption2: "Academic / Research Opportunity",
+        subjOption3: "Software / Game Engineering Role",
+        subjOption4: "General Inquiry",
+        formMsgLabel: "Message",
+        formSubmitEmail: "Compose & Send via Email",
+        formSubmitWa: "Send Directly via WhatsApp",
+        footerCopy: "© 2026 Shayan Amouzadeh — Computer & AI Engineer",
+        modalHighlightsTitle: "Key Technical & Architectural Highlights:",
+        modalTechTitle: "Technologies & Tools:",
+        btnDetails: "Tech Specs",
+        btnSource: "Open Link"
+      }
+    };
+
+    // --- ALL 8 PROJECTS DATA ---
+    const projectsData = [
+      {
+        id: "amlak-crm",
+        category: "ai-web",
+        featured: true,
+        url: "https://amlak-e-man.ir",
+        linkLabelFa: "مشاهده وب‌سایت زنده",
+        linkLabelEn: "Visit Live Platform",
+        badgeFa: "پروژه تجاری فعال + پایان‌نامه کارشناسی",
+        badgeEn: "Live Commercial Platform & B.Sc. Thesis",
+        titleFa: "سامانه جامع، چندمستأجره و هوشمند مدیریت املاک (املاک من)",
+        titleEn: "Multi-Tenant Intelligent Real Estate Management & CRM Platform (Amlak-e-Man)",
+        descFa: "اکوسیستم تجاری و چندمستأجره (Multi-Tenant CRM) بر پایه معماری کلاینت-سرور ماژولار (SPA/PWA) و بک‌اند PHP/MySQL؛ مجهز به موتور تطابق هوشمند تقاضای مشتریان با فایل‌های ملکی، الگوریتم اثرانگشت داده و کش تطبیقی (کاهش ۸۵٪ ترافیک شبکه)، امنیت چندلایه JWT (RFC 7519) و کنترل دسترسی سه‌سطحی (RBAC)، فشرده‌سازی سخت‌افزاری و واترمارک ضدسرقت تصاویر در مرورگر (کاهش ۹۰٪ حجم)، بوم نقشه تعاملی «نشان»، کاتالوگ‌ساز خودکار PDF، پایش برخط حضور مشاورین (Heartbeat) و ماژول هوش مصنوعی دوموتوره (صوتی و متنی جارویس).",
+        descEn: "Comprehensive Multi-Tenant Real Estate Management & CRM ecosystem built on Modular Client-Server (SPA/PWA) and PHP/MySQL architecture—featuring an Intelligent Client-Side Demand-Property Matching Engine, Data Fingerprinting & Adaptive Caching (85% bandwidth reduction), Stateless JWT (RFC 7519) & 3-Tier RBAC security, Client-Side HTML5 Canvas Image Compression (>90% size reduction) with anti-theft watermarking, Neshan geospatial mapping, automated PDF catalog generation, live consultant Heartbeat monitoring, and the dual-engine Jarvis Voice/NLP AI module.",
+        metrics: [
+          { val: "85%↓", labelFa: "کاهش ترافیک شبکه (Data Fingerprinting)", labelEn: "Bandwidth Saved (Data Fingerprinting)" },
+          { val: "90%+↓", labelFa: "کاهش حجم تصاویر (Canvas + Watermark)", labelEn: "Image Compression (Canvas Watermark)" },
+          { val: "320ms", labelFa: "میانگین زمان پاسخ‌دهی (Atomic UPSERT)", labelEn: "Avg Server Latency (Atomic UPSERT)" },
+          { val: "96%", labelFa: "دقت استخراج هوشمند (Whisper + Llama-3)", labelEn: "AI Entity Extraction Accuracy" }
+        ],
+        highlightsFa: [
+          "معماری کلاینت-سرور ماژولار (SPA/PWA) و رابط دوگانه: فرانت‌اند تک‌صفحه‌ای با قابلیت نصب بومی موبایل (PWA)، نمایش دوگانه کارتابل (کارت کامل و نمای فشرده Compact برای جلسات حضوری) و روتر بک‌اند PHP (api.php) بر بستر MySQL/InnoDB با گزاره‌های آماده PDO.",
+          "مهندسی دیتابیس چندمستأجره (Multi-Tenant)، موتور اتمیک UPSERT و خودترمیمی (Auto-Evolution): طراحی ۷ جدول تخصصی مجهز به خودترمیمی طرح‌واره در زمان اجرا بدون توقف سرویس (Zero-Downtime)، تراکنش‌های اتمیک درج و ویرایش درجا (UPSERT) و شناسه‌های معنایی (prop_, dem_, mem_) با ماسک SHA-256 علیه IDOR.",
+          "الگوریتم اثرانگشت داده (Data Fingerprinting) و کاهش ۸۵٪ ترافیک شبکه: لایه میانی ارتباط ناهمگام (apiCall) با ارسال هش داده‌ها (X-Data-Hash) و بررسی مهر زمان last_update به همراه قوانین دور زدن کش لبه کلودفلر (Edge Cache Bypass).",
+          "امنیت چندلایه، توکن‌های JWT (RFC 7519) و کنترل دسترسی RBAC: احراز هویت بدون حالت (Stateless) با امضای دیجیتال HMAC-SHA256 و نمک پویا، مدیریت ۳ نقش (مدیر آژانس، مشاور، مهمان)، سد دفاعی دومرحله‌ای علیه نشت بین‌آژانسی (Horizontal Privilege Escalation) و فایروال لغزان Rate Limiting.",
+          "موتور تطابق هوشمند تقاضا (Matching Engine) و پایش ضربان قلب (Heartbeat): تطبیق خودکار نیازمندی‌های مشتریان با فایل‌های فعال آژانس (تلورانس ۱۵٪ متراژ و ۱۰٪ بودجه) همراه با پیامک خودکار، و پایش حضور برخط مشاورین هر ۲۰ ثانیه (lastSeen) بدون سربار وب‌سوکت.",
+          "فشرده‌سازی تصویر (HTML5 Canvas)، نقشه «نشان»، کاتالوگ PDF و هوش مصنوعی دوموتوره: کاهش ۹۰٪ حجم تصاویر در مرورگر همراه با واترمارک ضدسرقت -45°، پاکسازی خودکار فایل‌های سرور (Garbage Collection)، نقشه تعاملی نشان و پایپ‌لاین دوموتوره Whisper-large-v3 (دقت ۹۲٪) و Llama-3 JSON Mode (دقت ۹۶٪)."
+        ],
+        highlightsEn: [
+          "Modular Client-Server (SPA/PWA) & Dual-Mode UI: Reload-free Vanilla JS SPA with native mobile installability (PWA), dual-mode property dashboard (Full Card & Compact Bar Mode), and centralized PHP REST router (api.php) backed by MySQL/InnoDB & PDO Prepared Statements.",
+          "Multi-Tenant Database, Atomic UPSERT & Zero-Downtime Auto-Evolution: 7 specialized tables with runtime self-healing schema migration, sub-millisecond atomic UPSERT transactions, and semantic microsecond IDs (prop_, dem_, mem_) with SHA-256 agency masking against IDOR.",
+          "Data Fingerprinting & 85% Bandwidth Reduction: Asynchronous client middleware (apiCall) sending X-Data-Hash signatures verified against server last_update timestamps with Cloudflare Edge Cache Bypass rules.",
+          "Enterprise Security, Stateless JWT (RFC 7519) & 3-Tier RBAC: Stateless tokens signed with HMAC-SHA256 and dynamic SecretSalt, 3-level Role-Based Access Control (Admin, Consultant, Guest), two-stage guard against Horizontal Privilege Escalation, and sliding-window Rate-Limiting firewall.",
+          "Client-Side Demand-Property Matching Engine & Heartbeat Monitor: Automated matching algorithm pairing client demands with active inventory (±15% area tolerance & +10% budget flexibility) plus a lightweight 20-second consultant online/offline Heartbeat Monitor (lastSeen).",
+          "HTML5 Canvas Watermarking, Neshan GIS, PDF Engine & Dual-Engine AI: In-browser image compression (>90% reduction) with -45° anti-theft watermarking, server Garbage Collection, Neshan SDK cluster mapping, and decoupled Whisper-large-v3 (92% ASR) + Llama-3 JSON Object Mode (96% extraction)."
+        ],
+        badgeType: "live", ciText: "85%↓ Bandwidth • 320ms Latency", archText: "Modular SPA/PWA • Multi-Tenant MySQL (UPSERT) • JWT & RBAC • Dual-Engine AI", tags: ["Modular SPA / PWA", "PHP REST API (api.php)", "Multi-Tenant MySQL (UPSERT)", "JWT (RFC 7519) & 3-Tier RBAC", "Data Fingerprinting (85%↓ BW)", "Client-Side Matching Engine", "HTML5 Canvas Watermark (90%↓)", "Neshan GIS SDK & PDF Engine", "Whisper-v3 & Llama-3 JSON AI"]
+      },
+      {
+        id: "movie-ml",
+        category: "ai-web",
+        featured: false,
+        url: "https://github.com/Shayan-Amz/Movie-ML-Pipeline",
+        linkLabelFa: "مشاهده در گیت‌هاب",
+        linkLabelEn: "View on GitHub",
+        badgeFa: "یادگیری ماشین و سیستم توصیه‌گر",
+        badgeEn: "Machine Learning Pipeline",
+        titleFa: "خط لوله یادگیری ماشین و سیستم توصیه‌گر فیلم",
+        titleEn: "Movie ML Pipeline & Recommender System",
+        descFa: "سیستم هوشمند پیشنهاد فیلم مبتنی بر تحلیل ویژگی‌ها و علاقه‌مندی‌های کاربران با الگوریتم‌های Content-Based و Collaborative Filtering.",
+        descEn: "End-to-end machine learning recommendation pipeline analyzing movie metadata and user preferences via Content-Based and Collaborative Filtering.",
+        highlightsFa: [
+          "پیش‌پردازش و پاک‌سازی متادیتای فیلم‌ها با استفاده از کتابخانه‌های Pandas و NumPy در پایتون",
+          "بردارسازی ویژگی‌ها (Feature Vectorization) و محاسبه ماتریس شباهت کسینوسی (Cosine Similarity) با Scikit-learn",
+          "پیاده‌سازی ترکیبی الگوریتم‌های Content-Based و Collaborative Filtering با مستندسازی کامل مهندسی"
+        ],
+        highlightsEn: [
+          "Automated metadata preprocessing and feature engineering using Python, Pandas, and NumPy",
+          "High-dimensional feature vectorization and Cosine Similarity matrix computation with Scikit-learn",
+          "Hybrid Content-Based and Collaborative Filtering engine delivering high-precision personalized suggestions"
+        ],
+        badgeType: "ml", ciText: "Pipelines OK", archText: "Cosine Similarity Matrix", tags: ["Python", "Scikit-learn", "Pandas", "NumPy", "Cosine Similarity", "Recommender Systems"]
+      },
+      {
+        id: "world-cup",
+        category: "systems-algo",
+        featured: false,
+        url: "https://github.com/Shayan-Amz/World-Cup-Simulator-And-Analyzer",
+        linkLabelFa: "مشاهده در گیت‌هاب",
+        linkLabelEn: "View on GitHub",
+        badgeFa: "مدل‌سازی احتمالاتی و شبیه‌سازی",
+        badgeEn: "Probabilistic Simulation Engine",
+        titleFa: "شبیه‌ساز و تحلیل‌گر جام جهانی فوتبال",
+        titleEn: "World Cup Simulator & Statistical Analyzer",
+        descFa: "شبیه‌سازی کامل فرآیند قرعه‌کشی، مرحله گروهی و درخت حذفی جام جهانی بر پایه قدرت نسبی تیم‌ها و مدل‌سازی آماری نتایج.",
+        descEn: "Complete tournament simulation engine modeling draw constraints, group stage standings, and knockout brackets using probabilistic match outcome modeling.",
+        highlightsFa: [
+          "برنامه‌نویسی شی‌گرا و الگوریتمیک برای مدیریت سیدبندی، قرعه‌کشی و قوانین فیفا",
+          "طراحی ساختار داده‌های اختصاصی برای محاسبه جدول امتیازات، تفاضل گل و درخت مراحل حذفی",
+          "پیاده‌سازی موتور شبیه‌سازی آماری بازی‌ها بر اساس شاخص قدرت نسبی تیم‌ها"
+        ],
+        highlightsEn: [
+          "Object-oriented algorithmic architecture enforcing official tournament draw rules and seeding constraints",
+          "Custom data structures managing live group tables, tie-breakers, goal differentials, and knockout trees",
+          "Statistical match simulation engine driven by relative team strength ratings and probability distributions"
+        ],
+        badgeType: "algo", ciText: "Statistical Engine", archText: "OOP Tournament Tree", tags: ["Python", "C++", "OOP", "Probabilistic Modeling", "Data Structures", "Statistical Analysis"]
+      },
+      {
+        id: "floating-point-alu",
+        category: "systems-algo",
+        featured: false,
+        url: "https://github.com/Shayan-Amz/Floating-Point-ALU",
+        linkLabelFa: "مشاهده در گیت‌هاب",
+        linkLabelEn: "View on GitHub",
+        badgeFa: "معماری کامپیوتر و سخت‌افزار",
+        badgeEn: "Computer Architecture & CI",
+        titleFa: "واحد محاسبه و منطق ممیز شناور (IEEE 754 ALU)",
+        titleEn: "IEEE 754 Floating-Point ALU Simulator",
+        descFa: "پیاده‌سازی و شبیه‌سازی دقیق واحد محاسبات ممیز شناور منطبق بر استاندارد IEEE 754 به زبان C++ همراه با پایپ‌لاین تست خودکار CI.",
+        descEn: "Bit-accurate C++ implementation and simulation of an IEEE 754 standard Floating-Point Arithmetic Logic Unit with cross-platform CI pipelines.",
+        highlightsFa: [
+          "پیاده‌سازی عملیات حسابی و منطقی اعداد ممیز شناور منطبق بر استاندارد جهانی IEEE 754",
+          "مدیریت دقیق بیت‌های علامت (Sign)، نما (Exponent) و مانتیس (Mantissa) به همراه گرد کردن و تشخیص سرریز",
+          "مجهز به پایپ‌لاین تست خودکار (CI Workflows) روی سیستم‌عامل‌های Windows و macOS"
+        ],
+        highlightsEn: [
+          "Bit-level implementation of IEEE 754 floating-point arithmetic operations in modern C++",
+          "Handles sign, exponent, mantissa normalization, rounding modes, and overflow/underflow edge cases",
+          "Verified via automated GitHub Actions CI testing pipelines across Windows and macOS environments"
+        ],
+        badgeType: "ci", ciText: "CI Passing (Win/macOS)", archText: "IEEE 754 Standard", tags: ["C++", "IEEE 754 Standard", "ALU Architecture", "Digital Logic", "GitHub Actions CI"]
+      },
+      {
+        id: "opengl-village",
+        category: "gamedev-graphics",
+        featured: false,
+        url: "https://github.com/Shayan-Amz/OpenGL-Dream-Village",
+        linkLabelFa: "مشاهده در گیت‌هاب",
+        linkLabelEn: "View on GitHub",
+        badgeFa: "گرافیک کامپیوتری سه‌بعدی",
+        badgeEn: "3D Computer Graphics",
+        titleFa: "رندرینگ صحنه گرافیکی دهکده رویایی (OpenGL)",
+        titleEn: "OpenGL Dream Village 3D Renderer",
+        descFa: "طراحی صحنه گرافیکی و پیاده‌سازی پایپ‌لاین رندرینگ با زبان C++ و کتابخانه OpenGL همراه با تست‌های خودکار CI.",
+        descEn: "Custom 3D scene rendering pipeline built from scratch in C++ and OpenGL featuring geometric transformations, lighting, and CI verification.",
+        highlightsFa: [
+          "پیاده‌سازی پایپ‌لاین رندرینگ گرافیکی با زبان C++ و کتابخانه OpenGL",
+          "مدل‌سازی هندسی عناصر صحنه، تبدیل‌های ماتریسی، نورپردازی و مدیریت دوربین",
+          "یکپارچه‌سازی با تست‌های خودکار CI در گیت‌هاب جهت تضمین صحت بیلد"
+        ],
+        highlightsEn: [
+          "Engineered custom rendering pipeline in C++ and OpenGL",
+          "Implemented geometric modeling, matrix transformations, lighting calculations, and camera navigation",
+          "Backed by automated continuous integration (CI) build and verification workflows"
+        ],
+        badgeType: "ci", ciText: "CI Automated Build", archText: "OpenGL 3D Pipeline", tags: ["C++", "OpenGL", "3D Rendering Pipeline", "Computer Graphics", "CI Automated Testing"]
+      },
+      {
+        id: "unity-school-ui",
+        category: "gamedev-graphics",
+        featured: false,
+        url: "https://github.com/Shayan-Amz/Unity-School-Directory-UI",
+        linkLabelFa: "مشاهده در گیت‌هاب",
+        linkLabelEn: "View on GitHub",
+        badgeFa: "توسعه یونیتی و رابط کاربری",
+        badgeEn: "Unity Engine & UI Architecture",
+        titleFa: "سیستم رابط کاربری دایرکتوری آموزشی در Unity",
+        titleEn: "Unity School Directory Interactive UI",
+        descFa: "طراحی و پیاده‌سازی رابط کاربری تعاملی و ماژولار در موتور Unity با زبان C# برای مدیریت و پیمایش ساختاریافته اطلاعات آموزشی.",
+        descEn: "Modular interactive directory interface engineered in Unity (C#) demonstrating clean UI component architecture and responsive state management.",
+        highlightsFa: [
+          "اسکریپت‌نویسی ماژولار به زبان C# در موتور بازی‌سازی Unity با رعایت اصول معماری تمیز",
+          "طراحی کامپوننت‌های رابط کاربری واکنش‌گرا برای جستجو، فیلتر و نمایش دسته‌بندی‌شده اطلاعات",
+          "جداسازی منطق داده‌ها از لایه نمایش جهت سهولت توسعه و نگهداری"
+        ],
+        highlightsEn: [
+          "Modular C# scripting inside Unity Engine following clean component-based UI architecture",
+          "Interactive views for searching, filtering, and navigating structured directory records",
+          "Decoupled data presentation and UI state management for high maintainability"
+        ],
+        badgeType: "unity", ciText: "Unity 2022+ Verified", archText: "Component Architecture", tags: ["C#", "Unity Engine", "UI/UX Architecture", "Component Design", "Interactive Systems"]
+      },
+      {
+        id: "fractional-knapsack",
+        category: "systems-algo",
+        featured: false,
+        url: "https://github.com/Shayan-Amz/Fractional-Knapsack-Greedy",
+        linkLabelFa: "مشاهده در گیت‌هاب",
+        linkLabelEn: "View on GitHub",
+        badgeFa: "طراحی الگوریتم و بهینه‌سازی",
+        badgeEn: "Algorithms & Graph Theory",
+        titleFa: "الگوریتم‌های حریصانه، گراف و بهینه‌سازی (C++)",
+        titleEn: "Greedy & Graph Algorithms Suite (Knapsack & Dijkstra)",
+        descFa: "پیاده‌سازی مجموعه الگوریتم‌های کلاسیک شامل کوله‌پشتی کسری، کوتاه‌ترین مسیر دایکسترا و برج هانوی با زبان C++.",
+        descEn: "High-efficiency C++ implementations of classic optimization and graph algorithms including Fractional Knapsack, Dijkstra's Shortest Path, and Towers of Hanoi.",
+        highlightsFa: [
+          "پیاده‌سازی بهینه الگوریتم حریصانه کوله‌پشتی کسری (Fractional Knapsack) با تحلیل پیچیدگی زمانی",
+          "پیاده‌سازی الگوریتم کوتاه‌ترین مسیر دایکسترا (Dijkstra's Algorithm) روی ساختار داده‌های گراف",
+          "حل بازگشتی و دقیق مسئله برج هانوی (Towers of Hanoi) به زبان C++"
+        ],
+        highlightsEn: [
+          "Optimal greedy implementation of the Fractional Knapsack problem with time-complexity optimization",
+          "Graph shortest-path routing via Dijkstra's Algorithm in C++",
+          "Recursive algorithmic solver for the classic Towers of Hanoi problem"
+        ],
+        badgeType: "algo", ciText: "Optimal Complexity", archText: "Graph Dijkstra / Greedy", tags: ["C++", "Greedy Algorithms", "Dijkstra's Algorithm", "Graph Theory", "Towers of Hanoi"]
+      },
+      {
+        id: "arm-flag-renderer",
+        category: "systems-algo",
+        featured: false,
+        url: "https://github.com/Shayan-Amz/ARM-Assembly-Flag-Renderer",
+        linkLabelFa: "مشاهده در گیت‌هاب",
+        linkLabelEn: "View on GitHub",
+        badgeFa: "برنامه‌نویسی سطح پایین و اسمبلی",
+        badgeEn: "Low-Level ARM Assembly",
+        titleFa: "رندرینگ گرافیکی پرچم با زبان اسمبلی ARM",
+        titleEn: "ARM Assembly Graphical Flag Renderer",
+        descFa: "برنامه‌نویسی سطح پایین به زبان اسمبلی پردازنده‌های ARM جهت رندرینگ گرافیکی مستقیم روی حافظه فریم‌بافر و مدیریت ثبات‌ها.",
+        descEn: "Low-level graphical flag renderer written directly in ARM Assembly, showcasing register-level optimization and memory-mapped framebuffer manipulation.",
+        highlightsFa: [
+          "برنامه‌نویسی مستقیم به زبان ARM Assembly و کار با ثبات‌ها (Registers) و دستورالعمل‌های سطح ماشین",
+          "رندرینگ پیکسل‌به‌پیکسل الگوهای هندسی پرچم از طریق آدرس‌دهی مستقیم حافظه تصویری (Framebuffer)",
+          "بهینه‌سازی حلقه‌ها و دستورات شرطی در سطح معماری مجموعه دستورالعمل (ISA)"
+        ],
+        highlightsEn: [
+          "Written directly in ARM Assembly utilizing register-level control and instruction set optimization",
+          "Pixel-accurate geometric rendering via direct memory-mapped framebuffer addressing",
+          "Demonstrates deep understanding of CPU instruction pipelines, branching, and low-level memory layout"
+        ],
+        badgeType: "asm", ciText: "Bare-Metal / Registers", archText: "ARM ISA Memory-Mapped", tags: ["ARM Assembly", "Computer Architecture", "Framebuffer Graphics", "Low-Level Systems", "Register Optimization"]
+      }
+    ];
+
+    // --- SKILLS DATA ---
+    const skillsData = [
+      {
+        cat: "lang",
+        code: "LANG",
+        titleFa: "زبان‌های برنامه‌نویسی",
+        titleEn: "Programming Languages",
+        descFa: "تسلط بر برنامه‌نویسی سطح سیستم، شی‌گرا، اسکریپت‌نویسی و توسعه وب",
+        descEn: "System-level, object-oriented, scripting, and full-stack web languages",
+        items: ["C++", "Python", "C#", "PHP", "JavaScript (ES6+)", "SQL", "ARM Assembly", "HTML5 / CSS3"]
+      },
+      {
+        cat: "ai",
+        code: "AI / ML",
+        titleFa: "هوش مصنوعی، عامل‌های هوشمند و اتوماسیون",
+        titleEn: "AI Agents, Machine Learning & Automation",
+        descFa: "طراحی ایجنت‌های هوشمند، پردازش زبان طبیعی، صوت و یادگیری ماشین",
+        descEn: "Agentic AI workflows, NLP, speech recognition, and predictive ML pipelines",
+        items: ["AI Agents (Agentic Workflows)", "Prompt Engineering", "Natural Language Processing (NLP)", "OpenAI Whisper (Speech-to-Text)", "Hugging Face & LLM APIs", "n8n (AI Workflow Automation)", "Recommender Systems", "Pandas / NumPy / Scikit-learn", "Selenium WebDriver"]
+      },
+      {
+        cat: "web",
+        code: "WEB / SEC",
+        titleFa: "توسعه وب، پایگاه داده و امنیت",
+        titleEn: "Web Architecture, Databases & Security",
+        descFa: "معماری کلاینت-سرور ماژولار، اپلیکیشن‌های پیش‌رونده و امنیت وب",
+        descEn: "Modular client-server systems, progressive web apps, and security hardening",
+        items: ["PWA (Progressive Web Apps)", "SPA (Single-Page Applications)", "RESTful API Design", "Microservice & Modular Architecture", "MySQL", "Microsoft Access", "Token-Based Authentication", "XSS & Session Hijacking Mitigation"]
+      },
+      {
+        cat: "game",
+        code: "GAME / GFX",
+        titleFa: "بازی‌سازی و گرافیک کامپیوتری",
+        titleEn: "Game Development & Computer Graphics",
+        descFa: "معماری داده‌محور ECS در یونیتی و پایپ‌لاین‌های رندرینگ سه‌بعدی",
+        descEn: "Data-oriented ECS game architecture and custom 3D OpenGL rendering",
+        items: ["Unity Engine", "Entitas Framework (ECS)", "Data-Oriented Design", "OpenGL 3D Rendering", "Unity UI Architecture"]
+      },
+      {
+        cat: "game",
+        code: "HW / SYS",
+        titleFa: "سخت‌افزار، سیستم‌های دیجیتال و معماری",
+        titleEn: "Hardware, Digital Logic & Architecture",
+        descFa: "طراحی مدارهای منطقی و مجتمع، شبیه‌سازی ALU و معماری پردازنده",
+        descEn: "Digital logic design, VLSI systems, and IEEE 754 floating-point architecture",
+        items: ["Digital Logic & FPGA", "VLSI Design", "IEEE 754 Floating-Point ALU", "Computer Architecture"]
+      },
+      {
+        cat: "web",
+        code: "DEVOPS / PM",
+        titleFa: "ابزارهای مهندسی نرم‌افزار و مدیریت پروژه",
+        titleEn: "Software Engineering & Project Management",
+        descFa: "کنترل نسخه، یکپارچه‌سازی مداوم (CI/CD) و مدیریت زمان‌بندی پروژه‌ها",
+        descEn: "Version control, cross-platform CI/CD pipelines, and enterprise project planning",
+        items: ["Git & GitHub", "GitHub Actions (CI/CD Workflows)", "Visual Studio & VS Code", "Microsoft Project (MSP)", "Microsoft Office Suite (Excel, Access, Word)"]
+      }
+    ];
+
+    // --- STATE ---
+    let currentLang = "fa";
+    let currentPalette = "navy";
+    let currentMode = "dark";
+    let currentProjectFilter = "all";
+    let currentSkillFilter = "all";
+
+    // --- RENDER PROJECTS (With Spotlight Flagship & Live Search) ---
+    let searchKeyword = "";
+
+    function renderProjects() {
+      const grid = document.getElementById("projects-grid");
+      const q = searchKeyword.toLowerCase().trim();
+
+      const filtered = projectsData.filter(p => {
+        const matchesCategory = (currentProjectFilter === "all" || p.category === currentProjectFilter);
+        if (!matchesCategory) return false;
+        if (!q) return true;
+        const searchPool = `${p.titleFa} ${p.titleEn} ${p.descFa} ${p.descEn} ${p.tags.join(" ")} ${p.ciText || ""} ${p.archText || ""}`.toLowerCase();
+        return searchPool.includes(q);
+      });
+
+      if (filtered.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full py-12 text-center text-sm theme-card rounded-3xl p-8" style="color: var(--text-secondary);">
+            <div class="text-2xl mb-2">🔍</div>
+            <div>${currentLang === "fa" ? `هیچ پروژه‌ای با عبارت "${searchKeyword}" یافت نشد.` : `No projects found matching "${searchKeyword}".`}</div>
+            <button type="button" id="btn-reset-filter" class="btn-primary px-4 py-1.5 rounded-xl text-xs font-semibold mt-3">Reset Filters</button>
+          </div>
+        `;
+        const resetBtn = document.getElementById("btn-reset-filter");
+        if (resetBtn) resetBtn.addEventListener("click", () => {
+          searchKeyword = "";
+          const inp = document.getElementById("project-search-input");
+          if (inp) inp.value = "";
+          document.getElementById("btn-clear-search").classList.add("hidden");
+          renderProjects();
+        });
+        return;
+      }
+
+      grid.innerHTML = filtered.map(p => {
+        const isFa = currentLang === "fa";
+        const title = isFa ? p.titleFa : p.titleEn;
+        const desc = isFa ? p.descFa : p.descEn;
+        const badge = isFa ? p.badgeFa : p.badgeEn;
+        const linkLabel = isFa ? p.linkLabelFa : p.linkLabelEn;
+        const detailsLabel = i18n[currentLang].btnDetails;
+        const isSpotlight = p.featured && currentProjectFilter === "all" && !q;
+        const cardClass = isSpotlight ? "spotlight-card md:col-span-2 lg:col-span-2" : "theme-card";
+
+        return `
+          <article class="${cardClass} rounded-3xl p-6 flex flex-col justify-between gap-5 transition-all">
+            <div class="space-y-3">
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <div class="flex flex-wrap items-center gap-1.5">
+                  <span class="tech-badge px-3 py-1 rounded-full text-xs font-semibold">${badge}</span>
+                  ${p.ciText ? `<span class="badge-ci"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>${p.ciText}</span>` : ''}
+                </div>
+                ${p.featured ? `<span class="px-2.5 py-0.5 rounded-md text-[11px] font-mono-code font-bold text-white shadow-sm" style="background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));">★ FLAGSHIP</span>` : ''}
+              </div>
+
+              <div>
+                <h3 class="text-lg sm:text-xl font-bold leading-snug">${title}</h3>
+                ${p.archText ? `<div class="text-[11px] font-mono-code mt-0.5" style="color: var(--accent-secondary);">// ARCH: ${p.archText}</div>` : ''}
+              </div>
+
+              <p class="text-xs sm:text-sm leading-relaxed" style="color: var(--text-secondary);">${desc}</p>
+              ${p.metrics ? `
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-2">
+                  ${p.metrics.map(m => `
+                    <div class="p-2.5 rounded-xl border" style="background: var(--bg-secondary); border-color: var(--border-color);">
+                      <div class="font-mono-code font-extrabold text-sm" style="color: var(--accent-secondary);">${m.val}</div>
+                      <div class="text-[11px] mt-0.5 leading-snug" style="color: var(--text-secondary);">${isFa ? m.labelFa : m.labelEn}</div>
+                    </div>
+                  `).join("")}
+                </div>
+              ` : ''}
+              ${p.featured ? `
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1">
+                  ${(isFa ? p.highlightsFa : p.highlightsEn).map(hl => {
+                    const parts = hl.split(":");
+                    return `<div class="p-2.5 rounded-xl border text-xs leading-relaxed" style="background: var(--bg-secondary); border-color: var(--border-color);"><span class="font-bold" style="color: var(--accent-secondary);">✦ ${parts[0]}:</span> <span style="color: var(--text-secondary);">${parts.slice(1).join(":")}</span></div>`;
+                  }).join("")}
+                </div>
+              ` : ''}
+            </div>
+
+            <div class="space-y-4">
+              <div class="flex flex-wrap gap-1.5">
+                ${p.tags.map(t => `<span class="px-2.5 py-1 rounded-lg text-[11px] font-mono-code border" style="background: var(--bg-secondary); border-color: var(--border-color); color: var(--text-secondary);">${t}</span>`).join("")}
+              </div>
+
+              <div class="pt-3 border-t flex items-center justify-between gap-2" style="border-color: var(--border-color);">
+                <button type="button" class="btn-open-modal btn-secondary px-3.5 py-2 rounded-xl text-xs font-semibold flex items-center gap-1.5" data-id="${p.id}">
+                  <span>${detailsLabel}</span>
+                </button>
+                <a href="${p.url}" target="_blank" rel="noopener noreferrer" class="btn-primary px-4 py-2 rounded-xl text-xs font-semibold flex items-center gap-1.5">
+                  <span>${linkLabel}</span>
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        `;
+      }).join("");
+
+      // Attach modal listeners
+      document.querySelectorAll(".btn-open-modal").forEach(btn => {
+        btn.addEventListener("click", () => openProjectModal(btn.getAttribute("data-id")));
+      });
+      initScrollReveal();
+    }
+
+    // --- RENDER SKILLS ---
+    function renderSkills() {
+      const grid = document.getElementById("skills-grid");
+      const filtered = skillsData.filter(s => currentSkillFilter === "all" || s.cat === currentSkillFilter);
+      const isFa = currentLang === "fa";
+
+      grid.innerHTML = filtered.map(s => `
+        <div class="theme-card p-6 rounded-3xl flex flex-col justify-between gap-4">
+          <div class="space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="tech-badge px-2.5 py-1 rounded-lg font-mono-code text-xs font-bold">${s.code}</span>
+              <span class="font-mono-code text-xs" style="color: var(--text-muted);">${s.items.length} skills</span>
+            </div>
+            <h3 class="font-bold text-base sm:text-lg pt-1">${isFa ? s.titleFa : s.titleEn}</h3>
+            <p class="text-xs leading-relaxed" style="color: var(--text-secondary);">${isFa ? s.descFa : s.descEn}</p>
+          </div>
+          <div class="flex flex-wrap gap-1.5 pt-2 border-t" style="border-color: var(--border-color);">
+            ${s.items.map(item => `<span class="px-2.5 py-1 rounded-lg text-xs font-mono-code border" style="background: var(--bg-secondary); border-color: var(--border-color); color: var(--text-primary);">${item}</span>`).join("")}
+          </div>
+        </div>
+      `).join("");
+      initScrollReveal();
+    }
+
+    // --- MODAL LOGIC ---
+    function openProjectModal(projectId) {
+      const p = projectsData.find(item => item.id === projectId);
+      if (!p) return;
+      const isFa = currentLang === "fa";
+      document.getElementById("modal-category").textContent = isFa ? p.badgeFa : p.badgeEn;
+      document.getElementById("modal-title").textContent = isFa ? p.titleFa : p.titleEn;
+      document.getElementById("modal-desc").textContent = isFa ? p.descFa : p.descEn;
+      const highlights = isFa ? p.highlightsFa : p.highlightsEn;
+      document.getElementById("modal-highlights").innerHTML = highlights.map(h => `<li>${h}</li>`).join("");
+      document.getElementById("modal-tags").innerHTML = p.tags.map(t => `<span class="tech-badge px-2.5 py-1 rounded-lg text-xs font-mono-code">${t}</span>`).join("");
+      const linkEl = document.getElementById("modal-link");
+      linkEl.href = p.url;
+      document.getElementById("modal-link-text").textContent = isFa ? p.linkLabelFa : p.linkLabelEn;
+
+      const modal = document.getElementById("project-modal");
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+    }
+
+    function closeProjectModal() {
+      const modal = document.getElementById("project-modal");
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+    }
+
+    // --- PALETTE & MODE SWITCHER ---
+    function updateThemeUI() {
+      const html = document.documentElement;
+      html.setAttribute("data-palette", currentPalette);
+      html.setAttribute("data-mode", currentMode);
+
+      // Update active pill classes
+      const allPaletteBtns = [
+        { id: "btn-palette-navy", key: "navy" },
+        { id: "btn-palette-slate", key: "slate" },
+        { id: "btn-palette-oxford", key: "oxford" },
+        { id: "btn-palette-navy-mob", key: "navy" },
+        { id: "btn-palette-slate-mob", key: "slate" },
+        { id: "btn-palette-oxford-mob", key: "oxford" }
+      ];
+      allPaletteBtns.forEach(item => {
+        const el = document.getElementById(item.id);
+        if (el) {
+          if (item.key === currentPalette) el.classList.add("active");
+          else el.classList.remove("active");
+        }
+      });
+
+      // Update mode icon & label
+      const sunIcon = document.getElementById("icon-sun");
+      const moonIcon = document.getElementById("icon-moon");
+      const modeLabel = document.getElementById("mode-label");
+      if (currentMode === "dark") {
+        sunIcon.classList.remove("hidden");
+        moonIcon.classList.add("hidden");
+        modeLabel.textContent = i18n[currentLang].modeLightLabel;
+      } else {
+        sunIcon.classList.add("hidden");
+        moonIcon.classList.remove("hidden");
+        modeLabel.textContent = i18n[currentLang].modeDarkLabel;
+      }
+
+      // Update indicator badge
+      const paletteNames = {
+        navy: "DEEP NAVY & COBALT",
+        slate: "SLATE & CYBER TEAL",
+        oxford: "OXFORD BLUE & SILVER"
+      };
+      const ind = document.getElementById("active-theme-indicator"); if (ind) ind.textContent =
+        `PALETTE: ${paletteNames[currentPalette]} (${currentMode.toUpperCase()})`;
+    }
+
+    // --- LANGUAGE SWITCHER ---
+    function updateLanguageUI() {
+      const html = document.documentElement;
+      html.setAttribute("lang", currentLang);
+      html.setAttribute("dir", currentLang === "fa" ? "rtl" : "ltr");
+      document.getElementById("lang-label").textContent = currentLang === "fa" ? "EN" : "FA";
+
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (i18n[currentLang][key]) {
+          el.textContent = i18n[currentLang][key];
+        }
+      });
+
+      updateThemeUI();
+      renderProjects();
+      renderSkills();
+      if (typeof runTypewriter === "function") {
+        isDeleting = false;
+        charIndex = 0;
+        runTypewriter();
+      }
+    }
+
+    // --- TOAST & CLIPBOARD ---
+    function showToast(msg) {
+      const toast = document.getElementById("toast");
+      document.getElementById("toast-text").textContent = msg;
+      toast.classList.remove("hidden");
+      toast.classList.add("flex");
+      setTimeout(() => {
+        toast.classList.add("hidden");
+        toast.classList.remove("flex");
+      }, 2600);
+    }
+
+    function copyText(text) {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(() => {
+          showToast(currentLang === "fa" ? `کپی شد: ${text}` : `Copied: ${text}`);
+        }).catch(() => fallbackCopy(text));
+      } else {
+        fallbackCopy(text);
+      }
+    }
+
+    function fallbackCopy(text) {
+      const ta = document.createElement("textarea");
+      ta.value = text;
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand("copy"); } catch (e) {}
+      document.body.removeChild(ta);
+      showToast(currentLang === "fa" ? `کپی شد: ${text}` : `Copied: ${text}`);
+    }
+
+        // --- SCROLL REVEAL & SCROLL PROGRESS ANIMATIONS ---
+    let revealObserver = null;
+    function initScrollReveal() {
+      const targets = document.querySelectorAll(
+        "section > div, .theme-card, #projects-grid > article, #skills-grid > div"
+      );
+      if (!("IntersectionObserver" in window)) {
+        targets.forEach(el => el.classList.add("is-visible"));
+        return;
+      }
+      if (!revealObserver) {
+        revealObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+            }
+          });
+        }, { threshold: 0.08, rootMargin: "0px 0px -30px 0px" });
+      }
+      targets.forEach((el, idx) => {
+        if (!el.classList.contains("reveal-item")) {
+          el.classList.add("reveal-item");
+          const stagger = (idx % 4) * 75;
+          el.style.setProperty("--reveal-delay", `${stagger}ms`);
+        }
+        revealObserver.observe(el);
+      });
+    }
+
+    function setupScrollEffects() {
+      const progressBar = document.getElementById("scroll-progress-bar");
+      const sections = document.querySelectorAll("section[id]");
+      const navLinks = document.querySelectorAll("header nav a.nav-item-pill");
+
+      window.addEventListener("scroll", () => {
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        if (progressBar && docHeight > 0) {
+          progressBar.style.width = `${Math.min(100, (scrollTop / docHeight) * 100)}%`;
+        }
+
+        let currentSection = "";
+        sections.forEach(sec => {
+          const top = sec.offsetTop - 160;
+          if (scrollTop >= top) {
+            currentSection = sec.getAttribute("id");
+          }
+        });
+        navLinks.forEach(link => {
+          if (link.getAttribute("href") === `#${currentSection}`) {
+            link.classList.add("active-nav");
+          } else {
+            link.classList.remove("active-nav");
+          }
+        });
+      }, { passive: true });
+    }
+
+        // --- DYNAMIC TYPEWRITER ENGINE ---
+    const typewriterPhrases = {
+      fa: [
+        "معماری نرم‌افزار، هوش مصنوعی و سیستم‌های مقیاس‌پذیر",
+        "طراحی عامل‌های هوشمند و پردازش زبان طبیعی",
+        "توسعه سامانه‌های مدرن تحت وب و میکروسرویس",
+        "مهندسی سیستم‌های سطح پایین، الگوریتم و بازی‌سازی"
+      ],
+      en: [
+        "Software Architecture, AI & Scalable Systems",
+        "Agentic AI, NLP & Speech-to-Text Pipelines",
+        "Modern Full-Stack PWA & Microservices",
+        "System-Level C++, IEEE 754 & Unity ECS"
+      ]
+    };
+    let typewriterIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let typewriterTimer = null;
+
+    function runTypewriter() {
+      const el = document.getElementById("typewriter-text");
+      if (!el) return;
+      const phrases = typewriterPhrases[currentLang] || typewriterPhrases.fa;
+      const currentPhrase = phrases[typewriterIndex % phrases.length];
+
+      if (isDeleting) {
+        charIndex--;
+        el.textContent = currentPhrase.substring(0, charIndex);
+      } else {
+        charIndex++;
+        el.textContent = currentPhrase.substring(0, charIndex);
+      }
+
+      let speed = isDeleting ? 35 : 70;
+      if (!isDeleting && charIndex === currentPhrase.length) {
+        speed = 2200; // Pause at end of phrase
+        isDeleting = true;
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        typewriterIndex++;
+        speed = 400; // Pause before next phrase
+      }
+
+      clearTimeout(typewriterTimer);
+      typewriterTimer = setTimeout(runTypewriter, speed);
+    }
+
+    // --- INITIALIZE EVENT LISTENERS ---
+    window.addEventListener("DOMContentLoaded", () => {
+      // Print / PDF Resume Trigger
+      const printBtn = document.getElementById("btn-print-cv");
+      if (printBtn) printBtn.addEventListener("click", () => window.print());
+      const heroPrintBtn = document.getElementById("btn-hero-print");
+      if (heroPrintBtn) heroPrintBtn.addEventListener("click", () => window.print());
+
+      // Live Tech Search Input
+      const searchInput = document.getElementById("project-search-input");
+      const clearSearchBtn = document.getElementById("btn-clear-search");
+      if (searchInput) {
+        searchInput.addEventListener("input", (e) => {
+          searchKeyword = e.target.value;
+          if (searchKeyword.trim()) {
+            clearSearchBtn.classList.remove("hidden");
+          } else {
+            clearSearchBtn.classList.add("hidden");
+          }
+          renderProjects();
+        });
+      }
+      if (clearSearchBtn) {
+        clearSearchBtn.addEventListener("click", () => {
+          searchInput.value = "";
+          searchKeyword = "";
+          clearSearchBtn.classList.add("hidden");
+          renderProjects();
+        });
+      }
+
+      // Start Typewriter
+      runTypewriter();
+      // Palette Switchers
+      ["navy", "slate", "oxford"].forEach(pKey => {
+        const desktopBtn = document.getElementById(`btn-palette-${pKey}`);
+        const mobileBtn = document.getElementById(`btn-palette-${pKey}-mob`);
+        if (desktopBtn) desktopBtn.addEventListener("click", () => { currentPalette = pKey; updateThemeUI(); });
+        if (mobileBtn) mobileBtn.addEventListener("click", () => { currentPalette = pKey; updateThemeUI(); });
+      });
+
+      // Dark / Light Mode Toggle
+      document.getElementById("btn-mode-toggle").addEventListener("click", () => {
+        currentMode = currentMode === "dark" ? "light" : "dark";
+        updateThemeUI();
+      });
+
+      // Language Toggle
+      document.getElementById("btn-lang-toggle").addEventListener("click", () => {
+        currentLang = currentLang === "fa" ? "en" : "fa";
+        updateLanguageUI();
+      });
+
+      // Mobile Navigation Drawer
+      const mobileDrawer = document.getElementById("mobile-nav-drawer");
+      document.getElementById("btn-mobile-menu").addEventListener("click", () => {
+        mobileDrawer.classList.toggle("hidden");
+      });
+      document.querySelectorAll(".mobile-nav-link").forEach(link => {
+        link.addEventListener("click", () => mobileDrawer.classList.add("hidden"));
+      });
+
+      // Hero Widget Tabs (Visual vs Terminal)
+      const tabVisual = document.getElementById("tab-hero-visual");
+      const tabTerminal = document.getElementById("tab-hero-terminal");
+      const panelVisual = document.getElementById("panel-hero-visual");
+      const panelTerminal = document.getElementById("panel-hero-terminal");
+
+      tabVisual.addEventListener("click", () => {
+        panelVisual.classList.remove("hidden");
+        panelTerminal.classList.add("hidden");
+        tabVisual.classList.add("btn-primary");
+        tabTerminal.classList.remove("btn-primary");
+      });
+
+      tabTerminal.addEventListener("click", () => {
+        panelTerminal.classList.remove("hidden");
+        panelVisual.classList.add("hidden");
+        tabTerminal.classList.add("btn-primary");
+        tabVisual.classList.remove("btn-primary");
+      });
+
+      // Interactive CLI Terminal Commands
+      const termOutput = document.getElementById("terminal-output");
+      document.querySelectorAll(".term-cmd-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const cmd = btn.getAttribute("data-cmd");
+          if (cmd === "clear") {
+            termOutput.innerHTML = `<div class="text-slate-400">Terminal cleared. Click a command below:</div>`;
+            return;
+          }
+          const responses = {
+            whoami: `<div class="text-emerald-300">&gt; whoami</div><div>Shayan Amouzadeh | Computer Engineer (Software) @ Semnan University | Creator of amlak-e-man.ir | 2 Yrs IT/Software Engineer @ Khakab Sazeh Ghomes | Unity ECS Developer.</div>`,
+            projects: `<div class="text-emerald-300">&gt; ls ./projects</div><div>[1] amlak-e-man.ir (Commercial AI Real Estate CRM)<br/>[2] Movie-ML-Pipeline (Scikit-learn Recommender)<br/>[3] World-Cup-Simulator-And-Analyzer<br/>[4] Floating-Point-ALU (IEEE 754 C++)<br/>[5] OpenGL-Dream-Village<br/>[6] Unity-School-Directory-UI<br/>[7] Fractional-Knapsack-Greedy<br/>[8] ARM-Assembly-Flag-Renderer</div>`,
+            skills: `<div class="text-emerald-300">&gt; cat skills.json</div><div>{"languages": ["C++", "Python", "C#", "PHP", "JS", "SQL", "ARM ASM"], "ai": ["AI Agents", "Whisper", "NLP", "Scikit-learn", "n8n"], "engines": ["Unity ECS/Entitas", "OpenGL"]}</div>`,
+            contact: `<div class="text-emerald-300">&gt; contact --info</div><div>Email: shayanamz.7687@gmail.com | Tel/WA: +98 919 332 3537 | GitHub: github.com/Shayan-Amz</div>`
+          };
+          const div = document.createElement("div");
+          div.className = "pt-1.5 border-t border-slate-800/80";
+          div.innerHTML = responses[cmd] || "";
+          termOutput.appendChild(div);
+          termOutput.scrollTop = termOutput.scrollHeight;
+        });
+      });
+
+      // Project Filter Buttons
+      document.querySelectorAll("#projects .filter-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+          document.querySelectorAll("#projects .filter-btn").forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+          currentProjectFilter = btn.getAttribute("data-filter");
+          renderProjects();
+        });
+      });
+
+      // Skill Filter Buttons
+      document.querySelectorAll(".skill-filter-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+          document.querySelectorAll(".skill-filter-btn").forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+          currentSkillFilter = btn.getAttribute("data-sfilter");
+          renderSkills();
+        });
+      });
+
+      // Modal Close Events
+      document.getElementById("btn-close-modal").addEventListener("click", closeProjectModal);
+      document.getElementById("project-modal").addEventListener("click", (e) => {
+        if (e.target.id === "project-modal") closeProjectModal();
+      });
+
+      // Copy Buttons
+      document.getElementById("btn-copy-email").addEventListener("click", () => copyText("shayanamz.7687@gmail.com"));
+      document.getElementById("btn-copy-phone").addEventListener("click", () => copyText("+989193323537"));
+
+      // Contact Form Submit (Email & WhatsApp)
+      document.getElementById("contact-form").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const name = document.getElementById("sender-name").value.trim();
+        const email = document.getElementById("sender-email").value.trim();
+        const subject = document.getElementById("sender-subject").value;
+        const msg = document.getElementById("sender-message").value.trim();
+        const body = encodeURIComponent(`Name: ${name}\nContact: ${email}\n\n${msg}`);
+        window.open(`mailto:shayanamz.7687@gmail.com?subject=${encodeURIComponent(subject + " - " + name)}&body=${body}`, "_blank");
+        showToast(currentLang === "fa" ? "پیش‌نویس ایمیل آماده شد!" : "Email draft opened!");
+      });
+
+      document.getElementById("btn-send-whatsapp").addEventListener("click", () => {
+        const name = document.getElementById("sender-name").value.trim() || "Visitor";
+        const subject = document.getElementById("sender-subject").value;
+        const msg = document.getElementById("sender-message").value.trim();
+        const text = encodeURIComponent(`سلام شایان عزیز، من ${name} هستم (${subject}).\n${msg}`);
+        window.open(`https://wa.me/989193323537?text=${text}`, "_blank");
+      });
+
+      // Handle external links gracefully inside sandboxed preview
+      document.addEventListener("click", (e) => {
+        const a = e.target.closest('a[target="_blank"]');
+        if (a && a.href) {
+          copyText(a.href);
+        }
+      });
+
+      // Initial Render
+      updateLanguageUI();
+      initScrollReveal();
+      setupScrollEffects();
+    });
+  </script>
+</body>
+</html>
